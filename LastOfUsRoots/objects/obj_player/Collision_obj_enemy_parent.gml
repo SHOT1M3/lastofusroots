@@ -111,6 +111,67 @@ if(vel_y > 0)
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
+/// @DnDHash : 315B5B9F
+/// @DnDComment : Check if the player was to the side of the enemy
+/// @DnDArgument : "var" "bbox_right - vel_x"
+/// @DnDArgument : "op" "1"
+/// @DnDArgument : "value" "other.bbox_right - other.vel_x"
+if(bbox_right - vel_x < other.bbox_right - other.vel_x)
+{
+	/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Pressed
+	/// @DnDVersion : 1
+	/// @DnDHash : 5068BCDB
+	/// @DnDParent : 315B5B9F
+	/// @DnDArgument : "key" "vk_control"
+	var l5068BCDB_0;
+	l5068BCDB_0 = keyboard_check_pressed(vk_control);
+	if (l5068BCDB_0)
+	{
+		/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 7D04F746
+		/// @DnDComment : Set the HP of the 'other' instance (which$(13_10)is the enemy) to 0, so that it's defeated.
+		/// @DnDParent : 5068BCDB
+		/// @DnDArgument : "var" "other.hp"
+		other.hp = 0;
+	
+		/// @DnDAction : YoYo Games.Instances.Set_Sprite
+		/// @DnDVersion : 1
+		/// @DnDHash : 79220902
+		/// @DnDComment : Change the sprite to spr_player_jump$(13_10)as the player is now jumping (and$(13_10)not falling anymore).
+		/// @DnDParent : 5068BCDB
+		/// @DnDArgument : "spriteind" "spr_player_walk_pickaxe"
+		/// @DnDSaveInfo : "spriteind" "spr_player_walk_pickaxe"
+		sprite_index = spr_player_walk_pickaxe;
+		image_index = 0;
+	
+		/// @DnDAction : YoYo Games.Instances.Sprite_Animation_Speed
+		/// @DnDVersion : 1
+		/// @DnDHash : 105D20C9
+		/// @DnDComment : The animation speed at this point would be 0$(13_10)if the fall animation had finished, so we reset$(13_10)it to 1 so the jump animation can play.
+		/// @DnDParent : 5068BCDB
+		image_speed = 1;
+	
+		/// @DnDAction : YoYo Games.Audio.Play_Audio
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 63EA0135
+		/// @DnDComment : Play the enemy hit sound effect
+		/// @DnDParent : 5068BCDB
+		/// @DnDArgument : "soundid" "snd_enemy_hit"
+		/// @DnDSaveInfo : "soundid" "snd_enemy_hit"
+		audio_play_sound(snd_enemy_hit, 0, 0, 1.0, undefined, 1.0);
+	}
+
+	/// @DnDAction : YoYo Games.Common.Exit_Event
+	/// @DnDVersion : 1
+	/// @DnDHash : 2FF4F9E7
+	/// @DnDComment : Finally, exit the event so the$(13_10)rest of the actions don't run$(13_10)(they make the player hurt)
+	/// @DnDParent : 315B5B9F
+	exit;
+}
+
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
 /// @DnDHash : 207E7703
 /// @DnDComment : This checks if the player is invincible,$(13_10)by checking if no_hurt_frames is greater$(13_10)than 0.
 /// @DnDArgument : "var" "no_hurt_frames"

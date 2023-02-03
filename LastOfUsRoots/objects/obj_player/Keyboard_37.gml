@@ -39,17 +39,49 @@ if(sprite_index == spr_player_fall)
 
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
-/// @DnDHash : 43A9A72F
+/// @DnDHash : 044D0444
 /// @DnDComment : This checks if the player is on the ground, before$(13_10)changing the sprite to the walking sprite. This is$(13_10)done to ensure that the walking sprite does not$(13_10)active while the player is in mid-air.
 /// @DnDArgument : "expr" "grounded"
 if(grounded)
 {
-	/// @DnDAction : YoYo Games.Instances.Set_Instance_Var
+	/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Down
 	/// @DnDVersion : 1
-	/// @DnDHash : 7E25A086
-	/// @DnDComment : Change the instance's sprite to the walking$(13_10)player sprite.$(13_10)$(13_10)We're using this instead of 'Set Sprite', as$(13_10)that action also changes the frame number, which$(13_10)we don't want to change.
-	/// @DnDParent : 43A9A72F
-	/// @DnDArgument : "value" "spr_player_walk"
-	/// @DnDArgument : "instvar" "10"
-	sprite_index = spr_player_walk;
+	/// @DnDHash : 0C180CC8
+	/// @DnDParent : 044D0444
+	/// @DnDArgument : "key" "vk_control"
+	var l0C180CC8_0;
+	l0C180CC8_0 = keyboard_check(vk_control);
+	if (l0C180CC8_0)
+	{
+		/// @DnDAction : YoYo Games.Instances.Set_Sprite
+		/// @DnDVersion : 1
+		/// @DnDHash : 6921AAFB
+		/// @DnDComment : Change the sprite to spr_player_jump$(13_10)as the player is now jumping (and$(13_10)not falling anymore).
+		/// @DnDParent : 0C180CC8
+		/// @DnDArgument : "spriteind" "spr_player_walk_pickaxe"
+		/// @DnDSaveInfo : "spriteind" "spr_player_walk_pickaxe"
+		sprite_index = spr_player_walk_pickaxe;
+		image_index = 0;
+	}
+
+	/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Down
+	/// @DnDVersion : 1
+	/// @DnDHash : 3DBC488E
+	/// @DnDParent : 044D0444
+	/// @DnDArgument : "key" "vk_control"
+	/// @DnDArgument : "not" "1"
+	var l3DBC488E_0;
+	l3DBC488E_0 = keyboard_check(vk_control);
+	if (!l3DBC488E_0)
+	{
+		/// @DnDAction : YoYo Games.Instances.Set_Sprite
+		/// @DnDVersion : 1
+		/// @DnDHash : 62C6DBDC
+		/// @DnDComment : Change the sprite to spr_player_jump$(13_10)as the player is now jumping (and$(13_10)not falling anymore).
+		/// @DnDParent : 3DBC488E
+		/// @DnDArgument : "spriteind" "spr_player_walk"
+		/// @DnDSaveInfo : "spriteind" "spr_player_walk"
+		sprite_index = spr_player_walk;
+		image_index = 0;
+	}
 }
