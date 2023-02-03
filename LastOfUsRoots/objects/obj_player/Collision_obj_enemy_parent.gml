@@ -20,6 +20,8 @@ if(vel_y > 0)
 		/// @DnDVersion : 1
 		/// @DnDHash : 0AF8930F
 		/// @DnDComment : Set the HP of the 'other' instance (which$(13_10)is the enemy) to 0, so that it's defeated.
+		/// @DnDBreak : 1
+	
 		/// @DnDParent : 3369AFE2
 		/// @DnDArgument : "var" "other.hp"
 		other.hp = 0;
