@@ -140,6 +140,7 @@
     {"name":"spr_grass3","order":2,"path":"sprites/spr_grass3/spr_grass3.yy",},
     {"name":"spr_player_jump","order":3,"path":"sprites/spr_player_jump/spr_player_jump.yy",},
     {"name":"obj_gamepad_input","order":1,"path":"objects/obj_gamepad_input/obj_gamepad_input.yy",},
+    {"name":"level_1","order":2,"path":"rooms/level_1/level_1.yy",},
     {"name":"obj_touch_button_pause","order":4,"path":"objects/obj_touch_button_pause/obj_touch_button_pause.yy",},
     {"name":"rm_level_2","order":1,"path":"rooms/rm_level_2/rm_level_2.yy",},
     {"name":"spr_hud_background","order":3,"path":"sprites/spr_hud_background/spr_hud_background.yy",},
@@ -181,7 +182,6 @@
     {"name":"spr_mushroom_group_4","order":12,"path":"sprites/spr_mushroom_group_4/spr_mushroom_group_4.yy",},
     {"name":"snd_enemy_hit","order":7,"path":"sounds/snd_enemy_hit/snd_enemy_hit.yy",},
     {"name":"obj_end_gate_particles","order":1,"path":"objects/obj_end_gate_particles/obj_end_gate_particles.yy",},
-    {"name":"obj_block_brick_destroy","order":4,"path":"objects/obj_block_brick_destroy/obj_block_brick_destroy.yy",},
     {"name":"spr_tileset_water","order":1,"path":"sprites/spr_tileset_water/spr_tileset_water.yy",},
   ],
 }
