@@ -83,9 +83,10 @@ switch(l61CEFEB2_0)
 		/// @DnDAction : YoYo Games.Instances.Set_Sprite
 		/// @DnDVersion : 1
 		/// @DnDHash : 4A919DDA
-		/// @DnDDisabled : 1
 		/// @DnDParent : 6854C97B
 		/// @DnDArgument : "spriteind" "spr_player_idle"
 		/// @DnDSaveInfo : "spriteind" "spr_player_idle"
+		sprite_index = spr_player_idle;
+		image_index = 0;
 		break;
 }

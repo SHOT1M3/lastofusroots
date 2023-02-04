@@ -122,41 +122,6 @@ switch(l2697BE31_0)
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1
-	/// @DnDHash : 2E855919
-	/// @DnDComment : Actions assigned to this Case run if the$(13_10)assigned sprite is 'spr_player_jump', meaning$(13_10)the player was in the middle of a jump.
-	/// @DnDParent : 2697BE31
-	/// @DnDArgument : "const" "spr_player_idle_pickaxe"
-	case spr_player_idle_pickaxe:
-		/// @DnDAction : YoYo Games.Common.If_Variable
-		/// @DnDVersion : 1
-		/// @DnDHash : 7821BD68
-		/// @DnDComment : This checks if the Y velocity is equal to,$(13_10)or greater than 0, meaning the player has$(13_10)now started falling downward.
-		/// @DnDParent : 2E855919
-		/// @DnDArgument : "var" "vel_y"
-		/// @DnDArgument : "op" "4"
-		if(vel_y >= 0)
-		{
-			/// @DnDAction : YoYo Games.Instances.Set_Sprite
-			/// @DnDVersion : 1
-			/// @DnDHash : 4A6F98C7
-			/// @DnDComment : In that case we change its sprite to the fall sprite,$(13_10)and reset the frame to 0.
-			/// @DnDParent : 7821BD68
-			/// @DnDArgument : "spriteind" "spr_player_idle"
-			/// @DnDSaveInfo : "spriteind" "spr_player_idle"
-			sprite_index = spr_player_idle;
-			image_index = 0;
-		
-			/// @DnDAction : YoYo Games.Instances.Sprite_Animation_Speed
-			/// @DnDVersion : 1
-			/// @DnDHash : 618F06CE
-			/// @DnDComment : We also reset the animation speed to 1, as it was set$(13_10)to 0 at the end of the jump animation.
-			/// @DnDParent : 7821BD68
-			image_speed = 1;
-		}
-		break;
-
-	/// @DnDAction : YoYo Games.Switch.Case
-	/// @DnDVersion : 1
 	/// @DnDHash : 7180DA62
 	/// @DnDComment : Actions assigned to this Case run if the$(13_10)assigned sprite is 'spr_player_jump', meaning$(13_10)the player was in the middle of a jump.
 	/// @DnDParent : 2697BE31
