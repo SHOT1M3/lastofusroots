@@ -8,6 +8,31 @@ switch(l61CEFEB2_0)
 {
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1
+	/// @DnDHash : 2D39EF3B
+	/// @DnDComment : Actions assigned to this Case run if the$(13_10)assigned sprite is 'spr_player_fall', meaning$(13_10)the player was falling downward.
+	/// @DnDParent : 61CEFEB2
+	/// @DnDArgument : "const" "spr_player_fall"
+	case spr_player_fall:
+		/// @DnDAction : YoYo Games.Instances.Sprite_Animation_Speed
+		/// @DnDVersion : 1
+		/// @DnDHash : 758BF6D2
+		/// @DnDComment : Since the animation has ended (which is why$(13_10)this event is running), we stop the animation$(13_10)by setting its speed to 0
+		/// @DnDParent : 2D39EF3B
+		/// @DnDArgument : "speed" "0"
+		image_speed = 0;
+	
+		/// @DnDAction : YoYo Games.Instances.Set_Instance_Var
+		/// @DnDVersion : 1
+		/// @DnDHash : 1F2FDEAD
+		/// @DnDComment : We also set the current frame to the last frame$(13_10)of the animation, which will remain visible
+		/// @DnDParent : 2D39EF3B
+		/// @DnDArgument : "value" "image_number - 1"
+		/// @DnDArgument : "instvar" "11"
+		image_index = image_number - 1;
+		break;
+
+	/// @DnDAction : YoYo Games.Switch.Case
+	/// @DnDVersion : 1
 	/// @DnDHash : 79F93656
 	/// @DnDComment : Actions assigned to this Case run if the$(13_10)assigned sprite is 'spr_player_jump', meaning$(13_10)the player was in the middle of a jump.
 	/// @DnDParent : 61CEFEB2
@@ -36,8 +61,8 @@ switch(l61CEFEB2_0)
 	/// @DnDHash : 6854C97B
 	/// @DnDComment : Actions assigned to this Case run if the$(13_10)assigned sprite is 'spr_player_fall', meaning$(13_10)the player was falling downward.
 	/// @DnDParent : 61CEFEB2
-	/// @DnDArgument : "const" "spr_player_fall"
-	case spr_player_fall:
+	/// @DnDArgument : "const" "spr_player_idle_pickaxe"
+	case spr_player_idle_pickaxe:
 		/// @DnDAction : YoYo Games.Instances.Sprite_Animation_Speed
 		/// @DnDVersion : 1
 		/// @DnDHash : 39AF08F7
