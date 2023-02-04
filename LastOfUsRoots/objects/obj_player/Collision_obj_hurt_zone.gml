@@ -2,38 +2,33 @@
 /// @DnDVersion : 1
 /// @DnDHash : 7FEA748F
 /// @DnDComment : This event runs when the current animation ends.$(13_10)$(13_10)This is a Switch statement that runs on the$(13_10)'sprite_index' variable, which stores the sprite$(13_10)currently assigned to the instance.$(13_10)$(13_10)This allows us to transition to some other sprite,$(13_10)depending on the currently assigned sprite.
+/// @DnDDisabled : 1
 /// @DnDArgument : "expr" "sprite_index"
-var l7FEA748F_0 = sprite_index;
-switch(l7FEA748F_0)
-{
-	/// @DnDAction : YoYo Games.Switch.Case
-	/// @DnDVersion : 1
-	/// @DnDHash : 4CDFC9B1
-	/// @DnDComment : Actions assigned to this Case run if the$(13_10)assigned sprite is 'spr_player_fall', meaning$(13_10)the player was falling downward.
-	/// @DnDParent : 7FEA748F
-	/// @DnDArgument : "const" "spr_player_walk_pickaxe"
-	case spr_player_walk_pickaxe:
-		/// @DnDAction : YoYo Games.Common.Exit_Event
-		/// @DnDVersion : 1
-		/// @DnDHash : 3C857B18
-		/// @DnDParent : 4CDFC9B1
-		exit;
-		break;
+/// @DnDAction : YoYo Games.Switch.Case
+/// @DnDVersion : 1
+/// @DnDHash : 4CDFC9B1
+/// @DnDComment : Actions assigned to this Case run if the$(13_10)assigned sprite is 'spr_player_fall', meaning$(13_10)the player was falling downward.
+/// @DnDDisabled : 1
+/// @DnDParent : 7FEA748F
+/// @DnDArgument : "const" "spr_player_walk_pickaxe"
+/// @DnDAction : YoYo Games.Common.Exit_Event
+/// @DnDVersion : 1
+/// @DnDHash : 3C857B18
+/// @DnDDisabled : 1
+/// @DnDParent : 4CDFC9B1
 
-	/// @DnDAction : YoYo Games.Switch.Case
-	/// @DnDVersion : 1
-	/// @DnDHash : 09475471
-	/// @DnDComment : Actions assigned to this Case run if the$(13_10)assigned sprite is 'spr_player_fall', meaning$(13_10)the player was falling downward.
-	/// @DnDParent : 7FEA748F
-	/// @DnDArgument : "const" "spr_player_idle_pickaxe"
-	case spr_player_idle_pickaxe:
-		/// @DnDAction : YoYo Games.Common.Exit_Event
-		/// @DnDVersion : 1
-		/// @DnDHash : 6D09032A
-		/// @DnDParent : 09475471
-		exit;
-		break;
-}
+/// @DnDAction : YoYo Games.Switch.Case
+/// @DnDVersion : 1
+/// @DnDHash : 09475471
+/// @DnDComment : Actions assigned to this Case run if the$(13_10)assigned sprite is 'spr_player_fall', meaning$(13_10)the player was falling downward.
+/// @DnDDisabled : 1
+/// @DnDParent : 7FEA748F
+/// @DnDArgument : "const" "spr_player_idle_pickaxe"
+/// @DnDAction : YoYo Games.Common.Exit_Event
+/// @DnDVersion : 1
+/// @DnDHash : 6D09032A
+/// @DnDDisabled : 1
+/// @DnDParent : 09475471
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
