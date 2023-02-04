@@ -68,6 +68,60 @@ switch(l2697BE31_0)
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1
+	/// @DnDHash : 21F0C5A8
+	/// @DnDComment : Actions assigned to this Case run if the$(13_10)assigned sprite is 'spr_player_walk', meaning$(13_10)the player is walking.
+	/// @DnDParent : 2697BE31
+	/// @DnDArgument : "const" "spr_player_walk_pickaxe"
+	case spr_player_walk_pickaxe:
+		/// @DnDAction : YoYo Games.Instances.Sprite_Animation_Speed
+		/// @DnDVersion : 1
+		/// @DnDHash : 4A6735A0
+		/// @DnDComment : Set the animation speed to 1, as it may have$(13_10)been set to 0 during the jump animation.
+		/// @DnDParent : 21F0C5A8
+		image_speed = 1;
+	
+		/// @DnDAction : YoYo Games.Common.If_Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 7A376900
+		/// @DnDComment : This checks if the X velocity is 0, meaning$(13_10)the player is not moving horizontally.
+		/// @DnDParent : 21F0C5A8
+		/// @DnDArgument : "var" "vel_x"
+		if(vel_x == 0)
+		{
+			/// @DnDAction : YoYo Games.Instances.Set_Instance_Var
+			/// @DnDVersion : 1
+			/// @DnDHash : 4BEF6DBD
+			/// @DnDComment : In that case we change its sprite to the idle one.
+			/// @DnDParent : 7A376900
+			/// @DnDArgument : "value" "spr_player_idle"
+			/// @DnDArgument : "instvar" "10"
+			sprite_index = spr_player_idle;
+		}
+	
+		/// @DnDAction : YoYo Games.Common.If_Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 7DA456E2
+		/// @DnDComment : This checks if the Y velocity of the player$(13_10)is greater than 1, meaning it is falling down.$(13_10)$(13_10)This would happen when the player walks off$(13_10)a ledge.
+		/// @DnDParent : 21F0C5A8
+		/// @DnDArgument : "var" "vel_y"
+		/// @DnDArgument : "op" "2"
+		/// @DnDArgument : "value" "1"
+		if(vel_y > 1)
+		{
+			/// @DnDAction : YoYo Games.Instances.Set_Sprite
+			/// @DnDVersion : 1
+			/// @DnDHash : 2A705A73
+			/// @DnDComment : In that case we change its sprite to the fall one,$(13_10)and reset the frame to 0.
+			/// @DnDParent : 7DA456E2
+			/// @DnDArgument : "spriteind" "spr_player_fall"
+			/// @DnDSaveInfo : "spriteind" "spr_player_fall"
+			sprite_index = spr_player_fall;
+			image_index = 0;
+		}
+		break;
+
+	/// @DnDAction : YoYo Games.Switch.Case
+	/// @DnDVersion : 1
 	/// @DnDHash : 7180DA62
 	/// @DnDComment : Actions assigned to this Case run if the$(13_10)assigned sprite is 'spr_player_jump', meaning$(13_10)the player was in the middle of a jump.
 	/// @DnDParent : 2697BE31

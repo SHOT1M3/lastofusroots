@@ -71,13 +71,38 @@ switch(l61CEFEB2_0)
 		/// @DnDArgument : "speed" "0"
 		image_speed = 0;
 	
-		/// @DnDAction : YoYo Games.Instances.Set_Instance_Var
+		/// @DnDAction : YoYo Games.Instances.Set_Sprite
 		/// @DnDVersion : 1
-		/// @DnDHash : 128356A1
-		/// @DnDComment : We also set the current frame to the last frame$(13_10)of the animation, which will remain visible
+		/// @DnDHash : 4A919DDA
 		/// @DnDParent : 6854C97B
-		/// @DnDArgument : "value" "image_number - 1"
-		/// @DnDArgument : "instvar" "11"
-		image_index = image_number - 1;
+		/// @DnDArgument : "spriteind" "spr_player_idle"
+		/// @DnDSaveInfo : "spriteind" "spr_player_idle"
+		sprite_index = spr_player_idle;
+		image_index = 0;
+		break;
+
+	/// @DnDAction : YoYo Games.Switch.Case
+	/// @DnDVersion : 1
+	/// @DnDHash : 2059FA50
+	/// @DnDComment : Actions assigned to this Case run if the$(13_10)assigned sprite is 'spr_player_fall', meaning$(13_10)the player was falling downward.
+	/// @DnDParent : 61CEFEB2
+	/// @DnDArgument : "const" "spr_player_walk_pickaxe"
+	case spr_player_walk_pickaxe:
+		/// @DnDAction : YoYo Games.Instances.Sprite_Animation_Speed
+		/// @DnDVersion : 1
+		/// @DnDHash : 56C22C0C
+		/// @DnDComment : Since the animation has ended (which is why$(13_10)this event is running), we stop the animation$(13_10)by setting its speed to 0
+		/// @DnDParent : 2059FA50
+		/// @DnDArgument : "speed" "0"
+		image_speed = 0;
+	
+		/// @DnDAction : YoYo Games.Instances.Set_Sprite
+		/// @DnDVersion : 1
+		/// @DnDHash : 4C0A320F
+		/// @DnDParent : 2059FA50
+		/// @DnDArgument : "spriteind" "spr_player_walk"
+		/// @DnDSaveInfo : "spriteind" "spr_player_walk"
+		sprite_index = spr_player_walk;
+		image_index = 0;
 		break;
 }
