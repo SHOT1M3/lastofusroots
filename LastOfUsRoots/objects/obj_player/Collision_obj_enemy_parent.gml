@@ -10,103 +10,109 @@ if(vel_y > 0)
 	/// @DnDVersion : 1
 	/// @DnDHash : 3369AFE2
 	/// @DnDComment : This checks if the bottom point of the player's$(13_10)collision mask was above the enemy mask's top$(13_10)point, in the previous frame.$(13_10)$(13_10)If this is true, it proves that the player is$(13_10)falling on top of the enemy from above, as it was$(13_10)previously above it.$(13_10)$(13_10)We get the bottom position for the previous frame$(13_10)by subtracting this frame's Y velocity from it.
+	/// @DnDDisabled : 1
 	/// @DnDParent : 57490043
 	/// @DnDArgument : "var" "bbox_bottom - vel_y"
 	/// @DnDArgument : "op" "1"
 	/// @DnDArgument : "value" "other.bbox_top - other.vel_y"
-	if(bbox_bottom - vel_y < other.bbox_top - other.vel_y)
-	{
-		/// @DnDAction : YoYo Games.Common.Variable
-		/// @DnDVersion : 1
-		/// @DnDHash : 0AF8930F
-		/// @DnDComment : Set the HP of the 'other' instance (which$(13_10)is the enemy) to 0, so that it's defeated.
-		/// @DnDParent : 3369AFE2
-		/// @DnDArgument : "var" "other.hp"
-		other.hp = 0;
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 0AF8930F
+	/// @DnDComment : Set the HP of the 'other' instance (which$(13_10)is the enemy) to 0, so that it's defeated.
+	/// @DnDDisabled : 1
+	/// @DnDParent : 3369AFE2
+	/// @DnDArgument : "var" "other.hp"
 	
-		/// @DnDAction : YoYo Games.Common.Variable
-		/// @DnDVersion : 1
-		/// @DnDHash : 731AA4F9
-		/// @DnDComment : Set the vertical velocity of the player$(13_10)to -jump_speed so it bounces off$(13_10)the enemy.
-		/// @DnDParent : 3369AFE2
-		/// @DnDArgument : "expr" "-jump_speed"
-		/// @DnDArgument : "var" "vel_y"
-		vel_y = -jump_speed;
 	
-		/// @DnDAction : YoYo Games.Instances.Set_Sprite
-		/// @DnDVersion : 1
-		/// @DnDHash : 6E07C0AD
-		/// @DnDComment : Change the sprite to spr_player_jump$(13_10)as the player is now jumping (and$(13_10)not falling anymore).
-		/// @DnDParent : 3369AFE2
-		/// @DnDArgument : "spriteind" "spr_player_jump"
-		/// @DnDSaveInfo : "spriteind" "spr_player_jump"
-		sprite_index = spr_player_jump;
-		image_index = 0;
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 731AA4F9
+	/// @DnDComment : Set the vertical velocity of the player$(13_10)to -jump_speed so it bounces off$(13_10)the enemy.
+	/// @DnDDisabled : 1
+	/// @DnDParent : 3369AFE2
+	/// @DnDArgument : "expr" "-jump_speed"
+	/// @DnDArgument : "var" "vel_y"
 	
-		/// @DnDAction : YoYo Games.Instances.Sprite_Animation_Speed
-		/// @DnDVersion : 1
-		/// @DnDHash : 4D6570BF
-		/// @DnDComment : The animation speed at this point would be 0$(13_10)if the fall animation had finished, so we reset$(13_10)it to 1 so the jump animation can play.
-		/// @DnDParent : 3369AFE2
-		image_speed = 1;
 	
-		/// @DnDAction : YoYo Games.Instances.Create_Instance
-		/// @DnDVersion : 1
-		/// @DnDHash : 101B7EFB
-		/// @DnDComment : This creates an instance of obj_effect_jump $(13_10)at the bottom of the player's mask. This is the$(13_10)jump VFX animation.$(13_10)
-		/// @DnDParent : 3369AFE2
-		/// @DnDArgument : "xpos" "x"
-		/// @DnDArgument : "ypos" "bbox_bottom"
-		/// @DnDArgument : "objectid" "obj_effect_jump"
-		/// @DnDSaveInfo : "objectid" "obj_effect_jump"
-		instance_create_layer(x, bbox_bottom, "Instances", obj_effect_jump);
+	/// @DnDAction : YoYo Games.Instances.Set_Sprite
+	/// @DnDVersion : 1
+	/// @DnDHash : 6E07C0AD
+	/// @DnDComment : Change the sprite to spr_player_jump$(13_10)as the player is now jumping (and$(13_10)not falling anymore).
+	/// @DnDDisabled : 1
+	/// @DnDParent : 3369AFE2
+	/// @DnDArgument : "spriteind" "spr_player_jump"
+	/// @DnDSaveInfo : "spriteind" "spr_player_jump"
 	
-		/// @DnDAction : YoYo Games.Audio.Play_Audio
-		/// @DnDVersion : 1.1
-		/// @DnDHash : 23FDD21E
-		/// @DnDComment : Play the enemy hit sound effect
-		/// @DnDParent : 3369AFE2
-		/// @DnDArgument : "soundid" "snd_enemy_hit"
-		/// @DnDSaveInfo : "soundid" "snd_enemy_hit"
-		audio_play_sound(snd_enemy_hit, 0, 0, 1.0, undefined, 1.0);
 	
-		/// @DnDAction : YoYo Games.Audio.Play_Audio
-		/// @DnDVersion : 1.1
-		/// @DnDHash : 63BC8A07
-		/// @DnDComment : Play the jump sound, and store the played sound's ID$(13_10)in a temporary variable
-		/// @DnDParent : 3369AFE2
-		/// @DnDArgument : "target" "sound"
-		/// @DnDArgument : "target_temp" "1"
-		/// @DnDArgument : "soundid" "snd_jump"
-		/// @DnDSaveInfo : "soundid" "snd_jump"
-		var sound = audio_play_sound(snd_jump, 0, 0, 1.0, undefined, 1.0);
+	/// @DnDAction : YoYo Games.Instances.Sprite_Animation_Speed
+	/// @DnDVersion : 1
+	/// @DnDHash : 4D6570BF
+	/// @DnDComment : The animation speed at this point would be 0$(13_10)if the fall animation had finished, so we reset$(13_10)it to 1 so the jump animation can play.
+	/// @DnDDisabled : 1
+	/// @DnDParent : 3369AFE2
 	
-		/// @DnDAction : YoYo Games.Random.Get_Random_Number
-		/// @DnDVersion : 1
-		/// @DnDHash : 753C1565
-		/// @DnDComment : Get a random value to use for the jump sound's pitch
-		/// @DnDParent : 3369AFE2
-		/// @DnDArgument : "var" "pitch"
-		/// @DnDArgument : "var_temp" "1"
-		/// @DnDArgument : "min" "0.8"
-		var pitch = (random_range(0.8, 1));
 	
-		/// @DnDAction : YoYo Games.Audio.Audio_Set_Pitch
-		/// @DnDVersion : 1
-		/// @DnDHash : 3E39A27C
-		/// @DnDComment : Change the jump sound's pitch through its ID variable
-		/// @DnDParent : 3369AFE2
-		/// @DnDArgument : "sound" "sound"
-		/// @DnDArgument : "pitch" "pitch"
-		audio_sound_pitch(sound, pitch);
+	/// @DnDAction : YoYo Games.Instances.Create_Instance
+	/// @DnDVersion : 1
+	/// @DnDHash : 101B7EFB
+	/// @DnDComment : This creates an instance of obj_effect_jump $(13_10)at the bottom of the player's mask. This is the$(13_10)jump VFX animation.$(13_10)
+	/// @DnDDisabled : 1
+	/// @DnDParent : 3369AFE2
+	/// @DnDArgument : "xpos" "x"
+	/// @DnDArgument : "ypos" "bbox_bottom"
+	/// @DnDArgument : "objectid" "obj_effect_jump"
+	/// @DnDSaveInfo : "objectid" "obj_effect_jump"
 	
-		/// @DnDAction : YoYo Games.Common.Exit_Event
-		/// @DnDVersion : 1
-		/// @DnDHash : 49718138
-		/// @DnDComment : Finally, exit the event so the$(13_10)rest of the actions don't run$(13_10)(they make the player hurt)
-		/// @DnDParent : 3369AFE2
-		exit;
-	}
+	
+	/// @DnDAction : YoYo Games.Audio.Play_Audio
+	/// @DnDVersion : 1.1
+	/// @DnDHash : 23FDD21E
+	/// @DnDComment : Play the enemy hit sound effect
+	/// @DnDDisabled : 1
+	/// @DnDParent : 3369AFE2
+	/// @DnDArgument : "soundid" "snd_enemy_hit"
+	/// @DnDSaveInfo : "soundid" "snd_enemy_hit"
+	
+	
+	/// @DnDAction : YoYo Games.Audio.Play_Audio
+	/// @DnDVersion : 1.1
+	/// @DnDHash : 63BC8A07
+	/// @DnDComment : Play the jump sound, and store the played sound's ID$(13_10)in a temporary variable
+	/// @DnDDisabled : 1
+	/// @DnDParent : 3369AFE2
+	/// @DnDArgument : "target" "sound"
+	/// @DnDArgument : "target_temp" "1"
+	/// @DnDArgument : "soundid" "snd_jump"
+	/// @DnDSaveInfo : "soundid" "snd_jump"
+	
+	
+	/// @DnDAction : YoYo Games.Random.Get_Random_Number
+	/// @DnDVersion : 1
+	/// @DnDHash : 753C1565
+	/// @DnDComment : Get a random value to use for the jump sound's pitch
+	/// @DnDDisabled : 1
+	/// @DnDParent : 3369AFE2
+	/// @DnDArgument : "var" "pitch"
+	/// @DnDArgument : "var_temp" "1"
+	/// @DnDArgument : "min" "0.8"
+	
+	
+	/// @DnDAction : YoYo Games.Audio.Audio_Set_Pitch
+	/// @DnDVersion : 1
+	/// @DnDHash : 3E39A27C
+	/// @DnDComment : Change the jump sound's pitch through its ID variable
+	/// @DnDDisabled : 1
+	/// @DnDParent : 3369AFE2
+	/// @DnDArgument : "sound" "sound"
+	/// @DnDArgument : "pitch" "pitch"
+	
+	
+	/// @DnDAction : YoYo Games.Common.Exit_Event
+	/// @DnDVersion : 1
+	/// @DnDHash : 49718138
+	/// @DnDComment : Finally, exit the event so the$(13_10)rest of the actions don't run$(13_10)(they make the player hurt)
+	/// @DnDDisabled : 1
+	/// @DnDParent : 3369AFE2
 }
 
 /// @DnDAction : YoYo Games.Common.If_Variable
