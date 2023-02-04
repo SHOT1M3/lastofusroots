@@ -22,8 +22,8 @@ if(vel_y > 0)
 	/// @DnDDisabled : 1
 	/// @DnDParent : 3369AFE2
 	/// @DnDArgument : "var" "other.hp"
-	
-	
+
+
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 731AA4F9
@@ -32,8 +32,8 @@ if(vel_y > 0)
 	/// @DnDParent : 3369AFE2
 	/// @DnDArgument : "expr" "-jump_speed"
 	/// @DnDArgument : "var" "vel_y"
-	
-	
+
+
 	/// @DnDAction : YoYo Games.Instances.Set_Sprite
 	/// @DnDVersion : 1
 	/// @DnDHash : 6E07C0AD
@@ -42,16 +42,16 @@ if(vel_y > 0)
 	/// @DnDParent : 3369AFE2
 	/// @DnDArgument : "spriteind" "spr_player_jump"
 	/// @DnDSaveInfo : "spriteind" "spr_player_jump"
-	
-	
+
+
 	/// @DnDAction : YoYo Games.Instances.Sprite_Animation_Speed
 	/// @DnDVersion : 1
 	/// @DnDHash : 4D6570BF
 	/// @DnDComment : The animation speed at this point would be 0$(13_10)if the fall animation had finished, so we reset$(13_10)it to 1 so the jump animation can play.
 	/// @DnDDisabled : 1
 	/// @DnDParent : 3369AFE2
-	
-	
+
+
 	/// @DnDAction : YoYo Games.Instances.Create_Instance
 	/// @DnDVersion : 1
 	/// @DnDHash : 101B7EFB
@@ -62,8 +62,8 @@ if(vel_y > 0)
 	/// @DnDArgument : "ypos" "bbox_bottom"
 	/// @DnDArgument : "objectid" "obj_effect_jump"
 	/// @DnDSaveInfo : "objectid" "obj_effect_jump"
-	
-	
+
+
 	/// @DnDAction : YoYo Games.Audio.Play_Audio
 	/// @DnDVersion : 1.1
 	/// @DnDHash : 23FDD21E
@@ -72,8 +72,8 @@ if(vel_y > 0)
 	/// @DnDParent : 3369AFE2
 	/// @DnDArgument : "soundid" "snd_enemy_hit"
 	/// @DnDSaveInfo : "soundid" "snd_enemy_hit"
-	
-	
+
+
 	/// @DnDAction : YoYo Games.Audio.Play_Audio
 	/// @DnDVersion : 1.1
 	/// @DnDHash : 63BC8A07
@@ -84,8 +84,8 @@ if(vel_y > 0)
 	/// @DnDArgument : "target_temp" "1"
 	/// @DnDArgument : "soundid" "snd_jump"
 	/// @DnDSaveInfo : "soundid" "snd_jump"
-	
-	
+
+
 	/// @DnDAction : YoYo Games.Random.Get_Random_Number
 	/// @DnDVersion : 1
 	/// @DnDHash : 753C1565
@@ -95,8 +95,8 @@ if(vel_y > 0)
 	/// @DnDArgument : "var" "pitch"
 	/// @DnDArgument : "var_temp" "1"
 	/// @DnDArgument : "min" "0.8"
-	
-	
+
+
 	/// @DnDAction : YoYo Games.Audio.Audio_Set_Pitch
 	/// @DnDVersion : 1
 	/// @DnDHash : 3E39A27C
@@ -105,8 +105,8 @@ if(vel_y > 0)
 	/// @DnDParent : 3369AFE2
 	/// @DnDArgument : "sound" "sound"
 	/// @DnDArgument : "pitch" "pitch"
-	
-	
+
+
 	/// @DnDAction : YoYo Games.Common.Exit_Event
 	/// @DnDVersion : 1
 	/// @DnDHash : 49718138
@@ -140,7 +140,7 @@ if (l5068BCDB_0)
 		/// @DnDParent : 315B5B9F
 		/// @DnDArgument : "var" "other.hp"
 		other.hp = 0;
-	
+
 		/// @DnDAction : YoYo Games.Instances.Set_Sprite
 		/// @DnDVersion : 1
 		/// @DnDHash : 79220902
@@ -150,14 +150,14 @@ if (l5068BCDB_0)
 		/// @DnDSaveInfo : "spriteind" "spr_player_walk_pickaxe"
 		sprite_index = spr_player_walk_pickaxe;
 		image_index = 0;
-	
+
 		/// @DnDAction : YoYo Games.Instances.Sprite_Animation_Speed
 		/// @DnDVersion : 1
 		/// @DnDHash : 105D20C9
 		/// @DnDComment : The animation speed at this point would be 0$(13_10)if the fall animation had finished, so we reset$(13_10)it to 1 so the jump animation can play.
 		/// @DnDParent : 315B5B9F
 		image_speed = 1;
-	
+
 		/// @DnDAction : YoYo Games.Audio.Play_Audio
 		/// @DnDVersion : 1.1
 		/// @DnDHash : 63EA0135
@@ -166,7 +166,7 @@ if (l5068BCDB_0)
 		/// @DnDArgument : "soundid" "snd_enemy_hit"
 		/// @DnDSaveInfo : "soundid" "snd_enemy_hit"
 		audio_play_sound(snd_enemy_hit, 0, 0, 1.0, undefined, 1.0);
-	
+
 		/// @DnDAction : YoYo Games.Common.Exit_Event
 		/// @DnDVersion : 1
 		/// @DnDHash : 2FF4F9E7
@@ -192,7 +192,7 @@ if (l5068BCDB_0)
 		/// @DnDParent : 41B59468
 		/// @DnDArgument : "var" "other.hp"
 		other.hp = 0;
-	
+
 		/// @DnDAction : YoYo Games.Instances.Set_Sprite
 		/// @DnDVersion : 1
 		/// @DnDHash : 77A59284
@@ -202,14 +202,14 @@ if (l5068BCDB_0)
 		/// @DnDSaveInfo : "spriteind" "spr_player_walk_pickaxe"
 		sprite_index = spr_player_walk_pickaxe;
 		image_index = 0;
-	
+
 		/// @DnDAction : YoYo Games.Instances.Sprite_Animation_Speed
 		/// @DnDVersion : 1
 		/// @DnDHash : 22D5E7B4
 		/// @DnDComment : The animation speed at this point would be 0$(13_10)if the fall animation had finished, so we reset$(13_10)it to 1 so the jump animation can play.
 		/// @DnDParent : 41B59468
 		image_speed = 1;
-	
+
 		/// @DnDAction : YoYo Games.Audio.Play_Audio
 		/// @DnDVersion : 1.1
 		/// @DnDHash : 0C7583B9
@@ -218,7 +218,7 @@ if (l5068BCDB_0)
 		/// @DnDArgument : "soundid" "snd_enemy_hit"
 		/// @DnDSaveInfo : "soundid" "snd_enemy_hit"
 		audio_play_sound(snd_enemy_hit, 0, 0, 1.0, undefined, 1.0);
-	
+
 		/// @DnDAction : YoYo Games.Common.Exit_Event
 		/// @DnDVersion : 1
 		/// @DnDHash : 518F283E
