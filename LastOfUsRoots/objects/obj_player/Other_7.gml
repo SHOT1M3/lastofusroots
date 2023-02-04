@@ -79,5 +79,13 @@ switch(l61CEFEB2_0)
 		/// @DnDArgument : "value" "image_number - 1"
 		/// @DnDArgument : "instvar" "11"
 		image_index = image_number - 1;
+	
+		/// @DnDAction : YoYo Games.Instances.Set_Sprite
+		/// @DnDVersion : 1
+		/// @DnDHash : 4A919DDA
+		/// @DnDDisabled : 1
+		/// @DnDParent : 6854C97B
+		/// @DnDArgument : "spriteind" "spr_player_idle"
+		/// @DnDSaveInfo : "spriteind" "spr_player_idle"
 		break;
 }

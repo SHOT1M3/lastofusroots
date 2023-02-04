@@ -37,21 +37,35 @@ if(sprite_index == spr_player_fall)
 	exit;
 }
 
+/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Pressed
+/// @DnDVersion : 1
+/// @DnDHash : 5858E7C0
+/// @DnDArgument : "key" "vk_control"
+var l5858E7C0_0;
+l5858E7C0_0 = keyboard_check_pressed(vk_control);
+if (l5858E7C0_0)
+{
+	/// @DnDAction : YoYo Games.Common.Exit_Event
+	/// @DnDVersion : 1
+	/// @DnDHash : 76878B0A
+	/// @DnDComment : In that case we exit/stop the event here, so$(13_10)the sprite doesn't change.
+	/// @DnDParent : 5858E7C0
+	exit;
+}
+
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
 /// @DnDHash : 57F9B1C7
 /// @DnDComment : This checks if the current sprite is the fall sprite,$(13_10)meaning the player hasn't landed yet.
+/// @DnDDisabled : 1
 /// @DnDArgument : "var" "sprite_index"
 /// @DnDArgument : "value" "spr_player_walk_pickaxe"
-if(sprite_index == spr_player_walk_pickaxe)
-{
-	/// @DnDAction : YoYo Games.Common.Exit_Event
-	/// @DnDVersion : 1
-	/// @DnDHash : 701D1FF2
-	/// @DnDComment : In that case we exit/stop the event here, so$(13_10)the sprite doesn't change.
-	/// @DnDParent : 57F9B1C7
-	exit;
-}
+/// @DnDAction : YoYo Games.Common.Exit_Event
+/// @DnDVersion : 1
+/// @DnDHash : 701D1FF2
+/// @DnDComment : In that case we exit/stop the event here, so$(13_10)the sprite doesn't change.
+/// @DnDDisabled : 1
+/// @DnDParent : 57F9B1C7
 
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
