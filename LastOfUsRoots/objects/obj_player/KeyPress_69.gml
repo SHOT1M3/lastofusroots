@@ -52,9 +52,9 @@ if (l44116C7D_0)
 	/// @DnDVersion : 1
 	/// @DnDHash : 46B4DA6C
 	/// @DnDParent : 44116C7D
-	/// @DnDArgument : "value" "spr_player_idle_pickaxe"
+	/// @DnDArgument : "value" "spr_player_dig"
 	/// @DnDArgument : "instvar" "10"
-	sprite_index = spr_player_idle_pickaxe;
+	sprite_index = spr_player_dig;
 }
 
 /// @DnDAction : YoYo Games.Common.Else
