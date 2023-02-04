@@ -28,7 +28,8 @@ if (l44116C7D_0)
 	/// @DnDParent : 44116C7D
 	/// @DnDArgument : "var" "tile"
 	/// @DnDArgument : "not" "1"
-	if(!(tile == 0))
+	/// @DnDArgument : "value" "109"
+	if(!(tile == 109))
 	{
 		/// @DnDAction : YoYo Games.Tiles.Tile_Set_At_Pixel
 		/// @DnDVersion : 1
@@ -100,7 +101,8 @@ else
 		/// @DnDParent : 1E366ED0
 		/// @DnDArgument : "var" "tile"
 		/// @DnDArgument : "not" "1"
-		if(!(tile == 0))
+		/// @DnDArgument : "value" "109"
+		if(!(tile == 109))
 		{
 			/// @DnDAction : YoYo Games.Tiles.Tile_Set_At_Pixel
 			/// @DnDVersion : 1
@@ -165,7 +167,8 @@ else
 			/// @DnDParent : 11D84FD5
 			/// @DnDArgument : "var" "tile"
 			/// @DnDArgument : "not" "1"
-			if(!(tile == 0))
+			/// @DnDArgument : "value" "109"
+			if(!(tile == 109))
 			{
 				/// @DnDAction : YoYo Games.Tiles.Tile_Set_At_Pixel
 				/// @DnDVersion : 1
@@ -222,7 +225,8 @@ else
 				/// @DnDParent : 0D69A625
 				/// @DnDArgument : "var" "tile"
 				/// @DnDArgument : "not" "1"
-				if(!(tile == 0))
+				/// @DnDArgument : "value" "109"
+				if(!(tile == 109))
 				{
 					/// @DnDAction : YoYo Games.Tiles.Tile_Set_At_Pixel
 					/// @DnDVersion : 1
