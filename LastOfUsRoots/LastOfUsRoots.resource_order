@@ -91,6 +91,7 @@
     {"name":"snd_amb_trees","order":2,"path":"sounds/snd_amb_trees/snd_amb_trees.yy",},
     {"name":"spr_player_dig","order":8,"path":"sprites/spr_player_dig/spr_player_dig.yy",},
     {"name":"spr_block_coins_hit_animation","order":2,"path":"sprites/spr_block_coins_hit_animation/spr_block_coins_hit_animation.yy",},
+    {"name":"spr_front_tree_4","order":3,"path":"sprites/spr_front_tree_4/spr_front_tree_4.yy",},
     {"name":"spr_tileset_cave","order":2,"path":"sprites/spr_tileset_cave/spr_tileset_cave.yy",},
     {"name":"spr_part_character_walk","order":2,"path":"sprites/spr_part_character_walk/spr_part_character_walk.yy",},
     {"name":"spr_vines_3","order":6,"path":"sprites/spr_vines_3/spr_vines_3.yy",},

@@ -106,86 +106,109 @@ if (l44116C7D_0)
 	
 		/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDVersion : 1
-		/// @DnDHash : 6879FE90
+		/// @DnDHash : 2470AA66
 		/// @DnDParent : 3777DE5F
 		/// @DnDArgument : "var" "tile"
-		/// @DnDArgument : "not" "1"
-		/// @DnDArgument : "value" "109"
-		if(!(tile == 109))
+		if(tile == 0)
 		{
-			/// @DnDAction : YoYo Games.Tiles.Tile_Set_At_Pixel
+			/// @DnDAction : YoYo Games.Instances.Set_Instance_Var
 			/// @DnDVersion : 1
-			/// @DnDHash : 445A4CB4
-			/// @DnDParent : 6879FE90
-			/// @DnDArgument : "x" "(obj_player.bbox_left+obj_player.bbox_right)/2"
-			/// @DnDArgument : "y" "obj_player.bbox_bottom + 64"
-			/// @DnDArgument : "layername" ""CollisionTiles""
-			var l445A4CB4_0 = layer_tilemap_get_id("CollisionTiles");
-			if(l445A4CB4_0 > -1) {
-				var l445A4CB4_1 = tilemap_get_at_pixel(l445A4CB4_0, (obj_player.bbox_left+obj_player.bbox_right)/2, obj_player.bbox_bottom + 64);
-				if(l445A4CB4_1 > -1) {
-					l445A4CB4_1 = tile_set_index(l445A4CB4_1, 0);
-					if(l445A4CB4_1 > -1) tilemap_set_at_pixel(l445A4CB4_0, l445A4CB4_1, (obj_player.bbox_left+obj_player.bbox_right)/2, obj_player.bbox_bottom + 64);
+			/// @DnDHash : 4F9A53C6
+			/// @DnDParent : 2470AA66
+			/// @DnDArgument : "value" "spr_player_dig"
+			/// @DnDArgument : "instvar" "10"
+			sprite_index = spr_player_dig;
+		}
+	
+		/// @DnDAction : YoYo Games.Common.Else
+		/// @DnDVersion : 1
+		/// @DnDHash : 0C139DDA
+		/// @DnDParent : 3777DE5F
+		else
+		{
+			/// @DnDAction : YoYo Games.Common.If_Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 6879FE90
+			/// @DnDParent : 0C139DDA
+			/// @DnDArgument : "var" "tile"
+			/// @DnDArgument : "not" "1"
+			/// @DnDArgument : "value" "109"
+			if(!(tile == 109))
+			{
+				/// @DnDAction : YoYo Games.Tiles.Tile_Set_At_Pixel
+				/// @DnDVersion : 1
+				/// @DnDHash : 445A4CB4
+				/// @DnDParent : 6879FE90
+				/// @DnDArgument : "x" "(obj_player.bbox_left+obj_player.bbox_right)/2"
+				/// @DnDArgument : "y" "obj_player.bbox_bottom + 64"
+				/// @DnDArgument : "layername" ""CollisionTiles""
+				var l445A4CB4_0 = layer_tilemap_get_id("CollisionTiles");
+				if(l445A4CB4_0 > -1) {
+					var l445A4CB4_1 = tilemap_get_at_pixel(l445A4CB4_0, (obj_player.bbox_left+obj_player.bbox_right)/2, obj_player.bbox_bottom + 64);
+					if(l445A4CB4_1 > -1) {
+						l445A4CB4_1 = tile_set_index(l445A4CB4_1, 0);
+						if(l445A4CB4_1 > -1) tilemap_set_at_pixel(l445A4CB4_0, l445A4CB4_1, (obj_player.bbox_left+obj_player.bbox_right)/2, obj_player.bbox_bottom + 64);
+					}
 				}
+			
+				/// @DnDAction : YoYo Games.Tiles.TileSet_Get_Variable
+				/// @DnDVersion : 1
+				/// @DnDHash : 2B412A88
+				/// @DnDParent : 6879FE90
+				/// @DnDArgument : "target" "temp_x"
+				/// @DnDArgument : "target_temp" "1"
+				/// @DnDArgument : "layername" ""CollisionTiles""
+				var l2B412A88_0 = layer_tilemap_get_id("CollisionTiles");
+				if(l2B412A88_0 > -1) {
+					var temp_x = tilemap_get_x(l2B412A88_0);
+				}
+			
+				/// @DnDAction : YoYo Games.Tiles.TileSet_Get_Variable
+				/// @DnDVersion : 1
+				/// @DnDHash : 44F4C6D2
+				/// @DnDParent : 6879FE90
+				/// @DnDArgument : "target" "temp_y"
+				/// @DnDArgument : "target_temp" "1"
+				/// @DnDArgument : "layername" ""CollisionTiles""
+				/// @DnDArgument : "var" "1"
+				var l44F4C6D2_0 = layer_tilemap_get_id("CollisionTiles");
+				if(l44F4C6D2_0 > -1) {
+					var temp_y = tilemap_get_y(l44F4C6D2_0);
+				}
+			
+				/// @DnDAction : YoYo Games.Instances.Create_Instance
+				/// @DnDVersion : 1
+				/// @DnDHash : 4A7F1E6E
+				/// @DnDComment : Create an instance of the brick block destroy$(13_10)object, which is an animation that shows the$(13_10)block being destroyed$(13_10)$(13_10)It's created at the same position and in the same$(13_10)layer as the block itself
+				/// @DnDParent : 6879FE90
+				/// @DnDArgument : "xpos" "temp_x"
+				/// @DnDArgument : "xpos_relative" "1"
+				/// @DnDArgument : "ypos" "temp_y"
+				/// @DnDArgument : "ypos_relative" "1"
+				/// @DnDArgument : "objectid" "obj_block_brick_destroy"
+				/// @DnDArgument : "layer" "layer"
+				/// @DnDSaveInfo : "objectid" "obj_block_brick_destroy"
+				instance_create_layer(x + temp_x, y + temp_y, layer, obj_block_brick_destroy);
+			
+				/// @DnDAction : YoYo Games.Random.Choose
+				/// @DnDVersion : 1
+				/// @DnDHash : 2EABDE45
+				/// @DnDComment : Choose a random block hit sound and play it
+				/// @DnDInput : 3
+				/// @DnDParent : 6879FE90
+				/// @DnDArgument : "var" "sound"
+				/// @DnDArgument : "option" "snd_dirt_block_hit_01"
+				/// @DnDArgument : "option_1" "snd_dirt_block_hit_02"
+				/// @DnDArgument : "option_2" "snd_dirt_block_hit_02"
+				sound = choose(snd_dirt_block_hit_01, snd_dirt_block_hit_02, snd_dirt_block_hit_02);
+			
+				/// @DnDAction : YoYo Games.Audio.Play_Audio
+				/// @DnDVersion : 1.1
+				/// @DnDHash : 66A4EB73
+				/// @DnDParent : 6879FE90
+				/// @DnDArgument : "soundid" "sound"
+				audio_play_sound(sound, 0, 0, 1.0, undefined, 1.0);
 			}
-		
-			/// @DnDAction : YoYo Games.Tiles.TileSet_Get_Variable
-			/// @DnDVersion : 1
-			/// @DnDHash : 2B412A88
-			/// @DnDParent : 6879FE90
-			/// @DnDArgument : "target" "temp_x"
-			/// @DnDArgument : "target_temp" "1"
-			/// @DnDArgument : "layername" ""CollisionTiles""
-			var l2B412A88_0 = layer_tilemap_get_id("CollisionTiles");
-			if(l2B412A88_0 > -1) {
-				var temp_x = tilemap_get_x(l2B412A88_0);
-			}
-		
-			/// @DnDAction : YoYo Games.Tiles.TileSet_Get_Variable
-			/// @DnDVersion : 1
-			/// @DnDHash : 44F4C6D2
-			/// @DnDParent : 6879FE90
-			/// @DnDArgument : "target" "temp_y"
-			/// @DnDArgument : "target_temp" "1"
-			/// @DnDArgument : "layername" ""CollisionTiles""
-			/// @DnDArgument : "var" "1"
-			var l44F4C6D2_0 = layer_tilemap_get_id("CollisionTiles");
-			if(l44F4C6D2_0 > -1) {
-				var temp_y = tilemap_get_y(l44F4C6D2_0);
-			}
-		
-			/// @DnDAction : YoYo Games.Instances.Create_Instance
-			/// @DnDVersion : 1
-			/// @DnDHash : 4A7F1E6E
-			/// @DnDComment : Create an instance of the brick block destroy$(13_10)object, which is an animation that shows the$(13_10)block being destroyed$(13_10)$(13_10)It's created at the same position and in the same$(13_10)layer as the block itself
-			/// @DnDParent : 6879FE90
-			/// @DnDArgument : "xpos" "temp_x"
-			/// @DnDArgument : "xpos_relative" "1"
-			/// @DnDArgument : "ypos" "temp_y"
-			/// @DnDArgument : "ypos_relative" "1"
-			/// @DnDArgument : "objectid" "obj_block_brick_destroy"
-			/// @DnDArgument : "layer" "layer"
-			/// @DnDSaveInfo : "objectid" "obj_block_brick_destroy"
-			instance_create_layer(x + temp_x, y + temp_y, layer, obj_block_brick_destroy);
-		
-			/// @DnDAction : YoYo Games.Random.Choose
-			/// @DnDVersion : 1
-			/// @DnDHash : 2EABDE45
-			/// @DnDComment : Choose a random block hit sound and play it
-			/// @DnDInput : 3
-			/// @DnDParent : 6879FE90
-			/// @DnDArgument : "var" "sound"
-			/// @DnDArgument : "option" "snd_dirt_block_hit_01"
-			/// @DnDArgument : "option_1" "snd_dirt_block_hit_02"
-			/// @DnDArgument : "option_2" "snd_dirt_block_hit_02"
-			sound = choose(snd_dirt_block_hit_01, snd_dirt_block_hit_02, snd_dirt_block_hit_02);
-		
-			/// @DnDAction : YoYo Games.Audio.Play_Audio
-			/// @DnDVersion : 1.1
-			/// @DnDHash : 66A4EB73
-			/// @DnDParent : 6879FE90
-			/// @DnDArgument : "soundid" "sound"
-			audio_play_sound(sound, 0, 0, 1.0, undefined, 1.0);
 		}
 	}
 }
@@ -304,86 +327,109 @@ else
 		
 			/// @DnDAction : YoYo Games.Common.If_Variable
 			/// @DnDVersion : 1
-			/// @DnDHash : 4B9AD0B8
+			/// @DnDHash : 6FA07F50
 			/// @DnDParent : 0FB560B5
 			/// @DnDArgument : "var" "tile"
-			/// @DnDArgument : "not" "1"
-			/// @DnDArgument : "value" "109"
-			if(!(tile == 109))
+			if(tile == 0)
 			{
-				/// @DnDAction : YoYo Games.Tiles.Tile_Set_At_Pixel
+				/// @DnDAction : YoYo Games.Instances.Set_Instance_Var
 				/// @DnDVersion : 1
-				/// @DnDHash : 34DB00B4
-				/// @DnDParent : 4B9AD0B8
-				/// @DnDArgument : "x" "(obj_player.bbox_left+obj_player.bbox_right)/2"
-				/// @DnDArgument : "y" "obj_player.bbox_top - 64"
-				/// @DnDArgument : "layername" ""CollisionTiles""
-				var l34DB00B4_0 = layer_tilemap_get_id("CollisionTiles");
-				if(l34DB00B4_0 > -1) {
-					var l34DB00B4_1 = tilemap_get_at_pixel(l34DB00B4_0, (obj_player.bbox_left+obj_player.bbox_right)/2, obj_player.bbox_top - 64);
-					if(l34DB00B4_1 > -1) {
-						l34DB00B4_1 = tile_set_index(l34DB00B4_1, 0);
-						if(l34DB00B4_1 > -1) tilemap_set_at_pixel(l34DB00B4_0, l34DB00B4_1, (obj_player.bbox_left+obj_player.bbox_right)/2, obj_player.bbox_top - 64);
+				/// @DnDHash : 3D73057D
+				/// @DnDParent : 6FA07F50
+				/// @DnDArgument : "value" "spr_player_walk_pickaxe"
+				/// @DnDArgument : "instvar" "10"
+				sprite_index = spr_player_walk_pickaxe;
+			}
+		
+			/// @DnDAction : YoYo Games.Common.Else
+			/// @DnDVersion : 1
+			/// @DnDHash : 46BEEF67
+			/// @DnDParent : 0FB560B5
+			else
+			{
+				/// @DnDAction : YoYo Games.Common.If_Variable
+				/// @DnDVersion : 1
+				/// @DnDHash : 4B9AD0B8
+				/// @DnDParent : 46BEEF67
+				/// @DnDArgument : "var" "tile"
+				/// @DnDArgument : "not" "1"
+				/// @DnDArgument : "value" "109"
+				if(!(tile == 109))
+				{
+					/// @DnDAction : YoYo Games.Tiles.Tile_Set_At_Pixel
+					/// @DnDVersion : 1
+					/// @DnDHash : 34DB00B4
+					/// @DnDParent : 4B9AD0B8
+					/// @DnDArgument : "x" "(obj_player.bbox_left+obj_player.bbox_right)/2"
+					/// @DnDArgument : "y" "obj_player.bbox_top - 64"
+					/// @DnDArgument : "layername" ""CollisionTiles""
+					var l34DB00B4_0 = layer_tilemap_get_id("CollisionTiles");
+					if(l34DB00B4_0 > -1) {
+						var l34DB00B4_1 = tilemap_get_at_pixel(l34DB00B4_0, (obj_player.bbox_left+obj_player.bbox_right)/2, obj_player.bbox_top - 64);
+						if(l34DB00B4_1 > -1) {
+							l34DB00B4_1 = tile_set_index(l34DB00B4_1, 0);
+							if(l34DB00B4_1 > -1) tilemap_set_at_pixel(l34DB00B4_0, l34DB00B4_1, (obj_player.bbox_left+obj_player.bbox_right)/2, obj_player.bbox_top - 64);
+						}
 					}
+				
+					/// @DnDAction : YoYo Games.Tiles.TileSet_Get_Variable
+					/// @DnDVersion : 1
+					/// @DnDHash : 7A8F5872
+					/// @DnDParent : 4B9AD0B8
+					/// @DnDArgument : "target" "temp_x"
+					/// @DnDArgument : "target_temp" "1"
+					/// @DnDArgument : "layername" ""CollisionTiles""
+					var l7A8F5872_0 = layer_tilemap_get_id("CollisionTiles");
+					if(l7A8F5872_0 > -1) {
+						var temp_x = tilemap_get_x(l7A8F5872_0);
+					}
+				
+					/// @DnDAction : YoYo Games.Tiles.TileSet_Get_Variable
+					/// @DnDVersion : 1
+					/// @DnDHash : 05B1BBE3
+					/// @DnDParent : 4B9AD0B8
+					/// @DnDArgument : "target" "temp_y"
+					/// @DnDArgument : "target_temp" "1"
+					/// @DnDArgument : "layername" ""CollisionTiles""
+					/// @DnDArgument : "var" "1"
+					var l05B1BBE3_0 = layer_tilemap_get_id("CollisionTiles");
+					if(l05B1BBE3_0 > -1) {
+						var temp_y = tilemap_get_y(l05B1BBE3_0);
+					}
+				
+					/// @DnDAction : YoYo Games.Instances.Create_Instance
+					/// @DnDVersion : 1
+					/// @DnDHash : 54D15117
+					/// @DnDComment : Create an instance of the brick block destroy$(13_10)object, which is an animation that shows the$(13_10)block being destroyed$(13_10)$(13_10)It's created at the same position and in the same$(13_10)layer as the block itself
+					/// @DnDParent : 4B9AD0B8
+					/// @DnDArgument : "xpos" "temp_x"
+					/// @DnDArgument : "xpos_relative" "1"
+					/// @DnDArgument : "ypos" "temp_y-256"
+					/// @DnDArgument : "ypos_relative" "1"
+					/// @DnDArgument : "objectid" "obj_block_brick_destroy"
+					/// @DnDArgument : "layer" "layer"
+					/// @DnDSaveInfo : "objectid" "obj_block_brick_destroy"
+					instance_create_layer(x + temp_x, y + temp_y-256, layer, obj_block_brick_destroy);
+				
+					/// @DnDAction : YoYo Games.Random.Choose
+					/// @DnDVersion : 1
+					/// @DnDHash : 065403B2
+					/// @DnDComment : Choose a random block hit sound and play it
+					/// @DnDInput : 3
+					/// @DnDParent : 4B9AD0B8
+					/// @DnDArgument : "var" "sound"
+					/// @DnDArgument : "option" "snd_dirt_block_hit_01"
+					/// @DnDArgument : "option_1" "snd_dirt_block_hit_02"
+					/// @DnDArgument : "option_2" "snd_dirt_block_hit_02"
+					sound = choose(snd_dirt_block_hit_01, snd_dirt_block_hit_02, snd_dirt_block_hit_02);
+				
+					/// @DnDAction : YoYo Games.Audio.Play_Audio
+					/// @DnDVersion : 1.1
+					/// @DnDHash : 3CCC6D9F
+					/// @DnDParent : 4B9AD0B8
+					/// @DnDArgument : "soundid" "sound"
+					audio_play_sound(sound, 0, 0, 1.0, undefined, 1.0);
 				}
-			
-				/// @DnDAction : YoYo Games.Tiles.TileSet_Get_Variable
-				/// @DnDVersion : 1
-				/// @DnDHash : 7A8F5872
-				/// @DnDParent : 4B9AD0B8
-				/// @DnDArgument : "target" "temp_x"
-				/// @DnDArgument : "target_temp" "1"
-				/// @DnDArgument : "layername" ""CollisionTiles""
-				var l7A8F5872_0 = layer_tilemap_get_id("CollisionTiles");
-				if(l7A8F5872_0 > -1) {
-					var temp_x = tilemap_get_x(l7A8F5872_0);
-				}
-			
-				/// @DnDAction : YoYo Games.Tiles.TileSet_Get_Variable
-				/// @DnDVersion : 1
-				/// @DnDHash : 05B1BBE3
-				/// @DnDParent : 4B9AD0B8
-				/// @DnDArgument : "target" "temp_y"
-				/// @DnDArgument : "target_temp" "1"
-				/// @DnDArgument : "layername" ""CollisionTiles""
-				/// @DnDArgument : "var" "1"
-				var l05B1BBE3_0 = layer_tilemap_get_id("CollisionTiles");
-				if(l05B1BBE3_0 > -1) {
-					var temp_y = tilemap_get_y(l05B1BBE3_0);
-				}
-			
-				/// @DnDAction : YoYo Games.Instances.Create_Instance
-				/// @DnDVersion : 1
-				/// @DnDHash : 54D15117
-				/// @DnDComment : Create an instance of the brick block destroy$(13_10)object, which is an animation that shows the$(13_10)block being destroyed$(13_10)$(13_10)It's created at the same position and in the same$(13_10)layer as the block itself
-				/// @DnDParent : 4B9AD0B8
-				/// @DnDArgument : "xpos" "temp_x"
-				/// @DnDArgument : "xpos_relative" "1"
-				/// @DnDArgument : "ypos" "temp_y-256"
-				/// @DnDArgument : "ypos_relative" "1"
-				/// @DnDArgument : "objectid" "obj_block_brick_destroy"
-				/// @DnDArgument : "layer" "layer"
-				/// @DnDSaveInfo : "objectid" "obj_block_brick_destroy"
-				instance_create_layer(x + temp_x, y + temp_y-256, layer, obj_block_brick_destroy);
-			
-				/// @DnDAction : YoYo Games.Random.Choose
-				/// @DnDVersion : 1
-				/// @DnDHash : 065403B2
-				/// @DnDComment : Choose a random block hit sound and play it
-				/// @DnDInput : 3
-				/// @DnDParent : 4B9AD0B8
-				/// @DnDArgument : "var" "sound"
-				/// @DnDArgument : "option" "snd_dirt_block_hit_01"
-				/// @DnDArgument : "option_1" "snd_dirt_block_hit_02"
-				/// @DnDArgument : "option_2" "snd_dirt_block_hit_02"
-				sound = choose(snd_dirt_block_hit_01, snd_dirt_block_hit_02, snd_dirt_block_hit_02);
-			
-				/// @DnDAction : YoYo Games.Audio.Play_Audio
-				/// @DnDVersion : 1.1
-				/// @DnDHash : 3CCC6D9F
-				/// @DnDParent : 4B9AD0B8
-				/// @DnDArgument : "soundid" "sound"
-				audio_play_sound(sound, 0, 0, 1.0, undefined, 1.0);
 			}
 		}
 	}
@@ -491,99 +537,121 @@ else
 				/// @DnDParent : 5FB6F583
 				/// @DnDArgument : "x" "obj_player.bbox_left - 64"
 				/// @DnDArgument : "y" "(obj_player.bbox_top+obj_player.bbox_bottom)/2"
-				/// @DnDArgument : "y_relative" "1"
 				/// @DnDArgument : "var" "tile"
 				/// @DnDArgument : "var_temp" "1"
 				/// @DnDArgument : "layername" ""CollisionTiles""
 				var l44F80B10_0 = layer_tilemap_get_id("CollisionTiles");
 				var tile = undefined;
 				if(l44F80B10_0 > -1) {
-					var l44F80B10_1 = tilemap_get_at_pixel(l44F80B10_0, obj_player.bbox_left - 64, y + (obj_player.bbox_top+obj_player.bbox_bottom)/2);
+					var l44F80B10_1 = tilemap_get_at_pixel(l44F80B10_0, obj_player.bbox_left - 64, (obj_player.bbox_top+obj_player.bbox_bottom)/2);
 					if(l44F80B10_1 > -1) tile = tile_get_index(l44F80B10_1);
 				}
 			
 				/// @DnDAction : YoYo Games.Common.If_Variable
 				/// @DnDVersion : 1
-				/// @DnDHash : 1A3DC2A8
+				/// @DnDHash : 5844C25B
 				/// @DnDParent : 5FB6F583
 				/// @DnDArgument : "var" "tile"
-				/// @DnDArgument : "not" "1"
-				/// @DnDArgument : "value" "109"
-				if(!(tile == 109))
+				if(tile == 0)
 				{
-					/// @DnDAction : YoYo Games.Tiles.Tile_Set_At_Pixel
+					/// @DnDAction : YoYo Games.Instances.Set_Instance_Var
 					/// @DnDVersion : 1
-					/// @DnDHash : 19035051
-					/// @DnDParent : 1A3DC2A8
-					/// @DnDArgument : "x" "obj_player.bbox_left - 64"
-					/// @DnDArgument : "y" "(obj_player.bbox_top+obj_player.bbox_bottom)/2"
-					/// @DnDArgument : "layername" ""CollisionTiles""
-					var l19035051_0 = layer_tilemap_get_id("CollisionTiles");
-					if(l19035051_0 > -1) {
-						var l19035051_1 = tilemap_get_at_pixel(l19035051_0, obj_player.bbox_left - 64, (obj_player.bbox_top+obj_player.bbox_bottom)/2);
-						if(l19035051_1 > -1) {
-							l19035051_1 = tile_set_index(l19035051_1, 0);
-							if(l19035051_1 > -1) tilemap_set_at_pixel(l19035051_0, l19035051_1, obj_player.bbox_left - 64, (obj_player.bbox_top+obj_player.bbox_bottom)/2);
+					/// @DnDHash : 47AF95F0
+					/// @DnDParent : 5844C25B
+					/// @DnDArgument : "value" "spr_player_walk_pickaxe"
+					/// @DnDArgument : "instvar" "10"
+					sprite_index = spr_player_walk_pickaxe;
+				}
+			
+				/// @DnDAction : YoYo Games.Common.Else
+				/// @DnDVersion : 1
+				/// @DnDHash : 3C3E8886
+				/// @DnDParent : 5FB6F583
+				else
+				{
+					/// @DnDAction : YoYo Games.Common.If_Variable
+					/// @DnDVersion : 1
+					/// @DnDHash : 1A3DC2A8
+					/// @DnDParent : 3C3E8886
+					/// @DnDArgument : "var" "tile"
+					/// @DnDArgument : "not" "1"
+					/// @DnDArgument : "value" "109"
+					if(!(tile == 109))
+					{
+						/// @DnDAction : YoYo Games.Tiles.Tile_Set_At_Pixel
+						/// @DnDVersion : 1
+						/// @DnDHash : 19035051
+						/// @DnDParent : 1A3DC2A8
+						/// @DnDArgument : "x" "obj_player.bbox_left - 64"
+						/// @DnDArgument : "y" "(obj_player.bbox_top+obj_player.bbox_bottom)/2"
+						/// @DnDArgument : "layername" ""CollisionTiles""
+						var l19035051_0 = layer_tilemap_get_id("CollisionTiles");
+						if(l19035051_0 > -1) {
+							var l19035051_1 = tilemap_get_at_pixel(l19035051_0, obj_player.bbox_left - 64, (obj_player.bbox_top+obj_player.bbox_bottom)/2);
+							if(l19035051_1 > -1) {
+								l19035051_1 = tile_set_index(l19035051_1, 0);
+								if(l19035051_1 > -1) tilemap_set_at_pixel(l19035051_0, l19035051_1, obj_player.bbox_left - 64, (obj_player.bbox_top+obj_player.bbox_bottom)/2);
+							}
 						}
+					
+						/// @DnDAction : YoYo Games.Tiles.TileSet_Get_Variable
+						/// @DnDVersion : 1
+						/// @DnDHash : 53901AA7
+						/// @DnDParent : 1A3DC2A8
+						/// @DnDArgument : "target" "temp_x"
+						/// @DnDArgument : "target_temp" "1"
+						/// @DnDArgument : "layername" ""CollisionTiles""
+						var l53901AA7_0 = layer_tilemap_get_id("CollisionTiles");
+						if(l53901AA7_0 > -1) {
+							var temp_x = tilemap_get_x(l53901AA7_0);
+						}
+					
+						/// @DnDAction : YoYo Games.Tiles.TileSet_Get_Variable
+						/// @DnDVersion : 1
+						/// @DnDHash : 2F5FDB48
+						/// @DnDParent : 1A3DC2A8
+						/// @DnDArgument : "target" "temp_y"
+						/// @DnDArgument : "target_temp" "1"
+						/// @DnDArgument : "layername" ""CollisionTiles""
+						/// @DnDArgument : "var" "1"
+						var l2F5FDB48_0 = layer_tilemap_get_id("CollisionTiles");
+						if(l2F5FDB48_0 > -1) {
+							var temp_y = tilemap_get_y(l2F5FDB48_0);
+						}
+					
+						/// @DnDAction : YoYo Games.Instances.Create_Instance
+						/// @DnDVersion : 1
+						/// @DnDHash : 3C0283B6
+						/// @DnDComment : Create an instance of the brick block destroy$(13_10)object, which is an animation that shows the$(13_10)block being destroyed$(13_10)$(13_10)It's created at the same position and in the same$(13_10)layer as the block itself
+						/// @DnDParent : 1A3DC2A8
+						/// @DnDArgument : "xpos" "temp_x-128"
+						/// @DnDArgument : "xpos_relative" "1"
+						/// @DnDArgument : "ypos" "temp_y-128"
+						/// @DnDArgument : "ypos_relative" "1"
+						/// @DnDArgument : "objectid" "obj_block_brick_destroy"
+						/// @DnDArgument : "layer" "layer"
+						/// @DnDSaveInfo : "objectid" "obj_block_brick_destroy"
+						instance_create_layer(x + temp_x-128, y + temp_y-128, layer, obj_block_brick_destroy);
+					
+						/// @DnDAction : YoYo Games.Random.Choose
+						/// @DnDVersion : 1
+						/// @DnDHash : 53664EBE
+						/// @DnDComment : Choose a random block hit sound and play it
+						/// @DnDInput : 3
+						/// @DnDParent : 1A3DC2A8
+						/// @DnDArgument : "var" "sound"
+						/// @DnDArgument : "option" "snd_dirt_block_hit_01"
+						/// @DnDArgument : "option_1" "snd_dirt_block_hit_02"
+						/// @DnDArgument : "option_2" "snd_dirt_block_hit_02"
+						sound = choose(snd_dirt_block_hit_01, snd_dirt_block_hit_02, snd_dirt_block_hit_02);
+					
+						/// @DnDAction : YoYo Games.Audio.Play_Audio
+						/// @DnDVersion : 1.1
+						/// @DnDHash : 7C74EE69
+						/// @DnDParent : 1A3DC2A8
+						/// @DnDArgument : "soundid" "sound"
+						audio_play_sound(sound, 0, 0, 1.0, undefined, 1.0);
 					}
-				
-					/// @DnDAction : YoYo Games.Tiles.TileSet_Get_Variable
-					/// @DnDVersion : 1
-					/// @DnDHash : 53901AA7
-					/// @DnDParent : 1A3DC2A8
-					/// @DnDArgument : "target" "temp_x"
-					/// @DnDArgument : "target_temp" "1"
-					/// @DnDArgument : "layername" ""CollisionTiles""
-					var l53901AA7_0 = layer_tilemap_get_id("CollisionTiles");
-					if(l53901AA7_0 > -1) {
-						var temp_x = tilemap_get_x(l53901AA7_0);
-					}
-				
-					/// @DnDAction : YoYo Games.Tiles.TileSet_Get_Variable
-					/// @DnDVersion : 1
-					/// @DnDHash : 2F5FDB48
-					/// @DnDParent : 1A3DC2A8
-					/// @DnDArgument : "target" "temp_y"
-					/// @DnDArgument : "target_temp" "1"
-					/// @DnDArgument : "layername" ""CollisionTiles""
-					/// @DnDArgument : "var" "1"
-					var l2F5FDB48_0 = layer_tilemap_get_id("CollisionTiles");
-					if(l2F5FDB48_0 > -1) {
-						var temp_y = tilemap_get_y(l2F5FDB48_0);
-					}
-				
-					/// @DnDAction : YoYo Games.Instances.Create_Instance
-					/// @DnDVersion : 1
-					/// @DnDHash : 3C0283B6
-					/// @DnDComment : Create an instance of the brick block destroy$(13_10)object, which is an animation that shows the$(13_10)block being destroyed$(13_10)$(13_10)It's created at the same position and in the same$(13_10)layer as the block itself
-					/// @DnDParent : 1A3DC2A8
-					/// @DnDArgument : "xpos" "temp_x-128"
-					/// @DnDArgument : "xpos_relative" "1"
-					/// @DnDArgument : "ypos" "temp_y-128"
-					/// @DnDArgument : "ypos_relative" "1"
-					/// @DnDArgument : "objectid" "obj_block_brick_destroy"
-					/// @DnDArgument : "layer" "layer"
-					/// @DnDSaveInfo : "objectid" "obj_block_brick_destroy"
-					instance_create_layer(x + temp_x-128, y + temp_y-128, layer, obj_block_brick_destroy);
-				
-					/// @DnDAction : YoYo Games.Random.Choose
-					/// @DnDVersion : 1
-					/// @DnDHash : 53664EBE
-					/// @DnDComment : Choose a random block hit sound and play it
-					/// @DnDInput : 3
-					/// @DnDParent : 1A3DC2A8
-					/// @DnDArgument : "var" "sound"
-					/// @DnDArgument : "option" "snd_dirt_block_hit_01"
-					/// @DnDArgument : "option_1" "snd_dirt_block_hit_02"
-					/// @DnDArgument : "option_2" "snd_dirt_block_hit_02"
-					sound = choose(snd_dirt_block_hit_01, snd_dirt_block_hit_02, snd_dirt_block_hit_02);
-				
-					/// @DnDAction : YoYo Games.Audio.Play_Audio
-					/// @DnDVersion : 1.1
-					/// @DnDHash : 7C74EE69
-					/// @DnDParent : 1A3DC2A8
-					/// @DnDArgument : "soundid" "sound"
-					audio_play_sound(sound, 0, 0, 1.0, undefined, 1.0);
 				}
 			}
 		}
@@ -679,7 +747,7 @@ else
 				{
 					/// @DnDAction : YoYo Games.Instances.Set_Instance_Var
 					/// @DnDVersion : 1
-					/// @DnDHash : 31B1E5AD
+					/// @DnDHash : 3C5D4120
 					/// @DnDParent : 3257B292
 					/// @DnDArgument : "value" "spr_player_walk_pickaxe"
 					/// @DnDArgument : "instvar" "10"
@@ -703,86 +771,117 @@ else
 				
 					/// @DnDAction : YoYo Games.Common.If_Variable
 					/// @DnDVersion : 1
-					/// @DnDHash : 288A1ED4
+					/// @DnDHash : 7BCF9B95
 					/// @DnDParent : 3257B292
 					/// @DnDArgument : "var" "tile"
-					/// @DnDArgument : "not" "1"
-					/// @DnDArgument : "value" "109"
-					if(!(tile == 109))
+					if(tile == 0)
 					{
-						/// @DnDAction : YoYo Games.Tiles.Tile_Set_At_Pixel
+						/// @DnDAction : YoYo Games.Instances.Set_Instance_Var
 						/// @DnDVersion : 1
-						/// @DnDHash : 037FD805
-						/// @DnDParent : 288A1ED4
-						/// @DnDArgument : "x" "obj_player.bbox_right + 64"
-						/// @DnDArgument : "y" "(obj_player.bbox_top+obj_player.bbox_bottom)/2"
-						/// @DnDArgument : "layername" ""CollisionTiles""
-						var l037FD805_0 = layer_tilemap_get_id("CollisionTiles");
-						if(l037FD805_0 > -1) {
-							var l037FD805_1 = tilemap_get_at_pixel(l037FD805_0, obj_player.bbox_right + 64, (obj_player.bbox_top+obj_player.bbox_bottom)/2);
-							if(l037FD805_1 > -1) {
-								l037FD805_1 = tile_set_index(l037FD805_1, 0);
-								if(l037FD805_1 > -1) tilemap_set_at_pixel(l037FD805_0, l037FD805_1, obj_player.bbox_right + 64, (obj_player.bbox_top+obj_player.bbox_bottom)/2);
+						/// @DnDHash : 07CB3721
+						/// @DnDParent : 7BCF9B95
+						/// @DnDArgument : "value" "spr_player_walk_pickaxe"
+						/// @DnDArgument : "instvar" "10"
+						sprite_index = spr_player_walk_pickaxe;
+					}
+				
+					/// @DnDAction : YoYo Games.Common.Else
+					/// @DnDVersion : 1
+					/// @DnDHash : 647F77BA
+					/// @DnDParent : 3257B292
+					else
+					{
+						/// @DnDAction : YoYo Games.Common.If_Variable
+						/// @DnDVersion : 1
+						/// @DnDHash : 288A1ED4
+						/// @DnDParent : 647F77BA
+						/// @DnDArgument : "var" "tile"
+						/// @DnDArgument : "not" "1"
+						/// @DnDArgument : "value" "109"
+						if(!(tile == 109))
+						{
+							/// @DnDAction : YoYo Games.Instances.Set_Instance_Var
+							/// @DnDVersion : 1
+							/// @DnDHash : 31B1E5AD
+							/// @DnDParent : 288A1ED4
+							/// @DnDArgument : "value" "spr_player_walk_pickaxe"
+							/// @DnDArgument : "instvar" "10"
+							sprite_index = spr_player_walk_pickaxe;
+						
+							/// @DnDAction : YoYo Games.Tiles.Tile_Set_At_Pixel
+							/// @DnDVersion : 1
+							/// @DnDHash : 037FD805
+							/// @DnDParent : 288A1ED4
+							/// @DnDArgument : "x" "obj_player.bbox_right + 64"
+							/// @DnDArgument : "y" "(obj_player.bbox_top+obj_player.bbox_bottom)/2"
+							/// @DnDArgument : "layername" ""CollisionTiles""
+							var l037FD805_0 = layer_tilemap_get_id("CollisionTiles");
+							if(l037FD805_0 > -1) {
+								var l037FD805_1 = tilemap_get_at_pixel(l037FD805_0, obj_player.bbox_right + 64, (obj_player.bbox_top+obj_player.bbox_bottom)/2);
+								if(l037FD805_1 > -1) {
+									l037FD805_1 = tile_set_index(l037FD805_1, 0);
+									if(l037FD805_1 > -1) tilemap_set_at_pixel(l037FD805_0, l037FD805_1, obj_player.bbox_right + 64, (obj_player.bbox_top+obj_player.bbox_bottom)/2);
+								}
 							}
+						
+							/// @DnDAction : YoYo Games.Tiles.TileSet_Get_Variable
+							/// @DnDVersion : 1
+							/// @DnDHash : 5923F380
+							/// @DnDParent : 288A1ED4
+							/// @DnDArgument : "target" "temp_x"
+							/// @DnDArgument : "target_temp" "1"
+							/// @DnDArgument : "layername" ""CollisionTiles""
+							var l5923F380_0 = layer_tilemap_get_id("CollisionTiles");
+							if(l5923F380_0 > -1) {
+								var temp_x = tilemap_get_x(l5923F380_0);
+							}
+						
+							/// @DnDAction : YoYo Games.Tiles.TileSet_Get_Variable
+							/// @DnDVersion : 1
+							/// @DnDHash : 754F4D6D
+							/// @DnDParent : 288A1ED4
+							/// @DnDArgument : "target" "temp_y"
+							/// @DnDArgument : "target_temp" "1"
+							/// @DnDArgument : "layername" ""CollisionTiles""
+							/// @DnDArgument : "var" "1"
+							var l754F4D6D_0 = layer_tilemap_get_id("CollisionTiles");
+							if(l754F4D6D_0 > -1) {
+								var temp_y = tilemap_get_y(l754F4D6D_0);
+							}
+						
+							/// @DnDAction : YoYo Games.Instances.Create_Instance
+							/// @DnDVersion : 1
+							/// @DnDHash : 27DFA4D9
+							/// @DnDComment : Create an instance of the brick block destroy$(13_10)object, which is an animation that shows the$(13_10)block being destroyed$(13_10)$(13_10)It's created at the same position and in the same$(13_10)layer as the block itself
+							/// @DnDParent : 288A1ED4
+							/// @DnDArgument : "xpos" "temp_x+128"
+							/// @DnDArgument : "xpos_relative" "1"
+							/// @DnDArgument : "ypos" "temp_y-128"
+							/// @DnDArgument : "ypos_relative" "1"
+							/// @DnDArgument : "objectid" "obj_block_brick_destroy"
+							/// @DnDArgument : "layer" "layer"
+							/// @DnDSaveInfo : "objectid" "obj_block_brick_destroy"
+							instance_create_layer(x + temp_x+128, y + temp_y-128, layer, obj_block_brick_destroy);
+						
+							/// @DnDAction : YoYo Games.Random.Choose
+							/// @DnDVersion : 1
+							/// @DnDHash : 4C452EBA
+							/// @DnDComment : Choose a random block hit sound and play it
+							/// @DnDInput : 3
+							/// @DnDParent : 288A1ED4
+							/// @DnDArgument : "var" "sound"
+							/// @DnDArgument : "option" "snd_dirt_block_hit_01"
+							/// @DnDArgument : "option_1" "snd_dirt_block_hit_02"
+							/// @DnDArgument : "option_2" "snd_dirt_block_hit_02"
+							sound = choose(snd_dirt_block_hit_01, snd_dirt_block_hit_02, snd_dirt_block_hit_02);
+						
+							/// @DnDAction : YoYo Games.Audio.Play_Audio
+							/// @DnDVersion : 1.1
+							/// @DnDHash : 0180F3DC
+							/// @DnDParent : 288A1ED4
+							/// @DnDArgument : "soundid" "sound"
+							audio_play_sound(sound, 0, 0, 1.0, undefined, 1.0);
 						}
-					
-						/// @DnDAction : YoYo Games.Tiles.TileSet_Get_Variable
-						/// @DnDVersion : 1
-						/// @DnDHash : 5923F380
-						/// @DnDParent : 288A1ED4
-						/// @DnDArgument : "target" "temp_x"
-						/// @DnDArgument : "target_temp" "1"
-						/// @DnDArgument : "layername" ""CollisionTiles""
-						var l5923F380_0 = layer_tilemap_get_id("CollisionTiles");
-						if(l5923F380_0 > -1) {
-							var temp_x = tilemap_get_x(l5923F380_0);
-						}
-					
-						/// @DnDAction : YoYo Games.Tiles.TileSet_Get_Variable
-						/// @DnDVersion : 1
-						/// @DnDHash : 754F4D6D
-						/// @DnDParent : 288A1ED4
-						/// @DnDArgument : "target" "temp_y"
-						/// @DnDArgument : "target_temp" "1"
-						/// @DnDArgument : "layername" ""CollisionTiles""
-						/// @DnDArgument : "var" "1"
-						var l754F4D6D_0 = layer_tilemap_get_id("CollisionTiles");
-						if(l754F4D6D_0 > -1) {
-							var temp_y = tilemap_get_y(l754F4D6D_0);
-						}
-					
-						/// @DnDAction : YoYo Games.Instances.Create_Instance
-						/// @DnDVersion : 1
-						/// @DnDHash : 27DFA4D9
-						/// @DnDComment : Create an instance of the brick block destroy$(13_10)object, which is an animation that shows the$(13_10)block being destroyed$(13_10)$(13_10)It's created at the same position and in the same$(13_10)layer as the block itself
-						/// @DnDParent : 288A1ED4
-						/// @DnDArgument : "xpos" "temp_x+128"
-						/// @DnDArgument : "xpos_relative" "1"
-						/// @DnDArgument : "ypos" "temp_y-128"
-						/// @DnDArgument : "ypos_relative" "1"
-						/// @DnDArgument : "objectid" "obj_block_brick_destroy"
-						/// @DnDArgument : "layer" "layer"
-						/// @DnDSaveInfo : "objectid" "obj_block_brick_destroy"
-						instance_create_layer(x + temp_x+128, y + temp_y-128, layer, obj_block_brick_destroy);
-					
-						/// @DnDAction : YoYo Games.Random.Choose
-						/// @DnDVersion : 1
-						/// @DnDHash : 4C452EBA
-						/// @DnDComment : Choose a random block hit sound and play it
-						/// @DnDInput : 3
-						/// @DnDParent : 288A1ED4
-						/// @DnDArgument : "var" "sound"
-						/// @DnDArgument : "option" "snd_dirt_block_hit_01"
-						/// @DnDArgument : "option_1" "snd_dirt_block_hit_02"
-						/// @DnDArgument : "option_2" "snd_dirt_block_hit_02"
-						sound = choose(snd_dirt_block_hit_01, snd_dirt_block_hit_02, snd_dirt_block_hit_02);
-					
-						/// @DnDAction : YoYo Games.Audio.Play_Audio
-						/// @DnDVersion : 1.1
-						/// @DnDHash : 0180F3DC
-						/// @DnDParent : 288A1ED4
-						/// @DnDArgument : "soundid" "sound"
-						audio_play_sound(sound, 0, 0, 1.0, undefined, 1.0);
 					}
 				}
 			}
