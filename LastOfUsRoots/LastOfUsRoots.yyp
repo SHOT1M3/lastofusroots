@@ -116,6 +116,7 @@
     {"id":{"name":"obj_hud_hearts","path":"objects/obj_hud_hearts/obj_hud_hearts.yy",},"order":0,},
     {"id":{"name":"spr_player_dig","path":"sprites/spr_player_dig/spr_player_dig.yy",},"order":0,},
     {"id":{"name":"spr_block_coins_hit_animation","path":"sprites/spr_block_coins_hit_animation/spr_block_coins_hit_animation.yy",},"order":2,},
+    {"id":{"name":"spr_front_tree_4","path":"sprites/spr_front_tree_4/spr_front_tree_4.yy",},"order":0,},
     {"id":{"name":"snd_amb_cave_01","path":"sounds/snd_amb_cave_01/snd_amb_cave_01.yy",},"order":0,},
     {"id":{"name":"spr_tileset_cave","path":"sprites/spr_tileset_cave/spr_tileset_cave.yy",},"order":2,},
     {"id":{"name":"spr_enemy2_large_walk","path":"sprites/spr_enemy2_large_walk/spr_enemy2_large_walk.yy",},"order":0,},
