@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_enemy2_large_defeated",
-    "path": "sprites/spr_enemy2_large_defeated/spr_enemy2_large_defeated.yy",
+    "name": "spr_enemy2_defeated",
+    "path": "sprites/spr_enemy2_defeated/spr_enemy2_defeated.yy",
   },
   "spriteMaskId": null,
   "visible": true,
