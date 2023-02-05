@@ -27,10 +27,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_enemy3_small_defeated",
-    "path": "sprites/spr_enemy3_small_defeated/spr_enemy3_small_defeated.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

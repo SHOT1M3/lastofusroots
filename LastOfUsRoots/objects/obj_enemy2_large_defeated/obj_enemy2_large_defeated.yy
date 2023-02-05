@@ -27,10 +27,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_enemy2_large_defeated",
-    "path": "sprites/spr_enemy2_large_defeated/spr_enemy2_large_defeated.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

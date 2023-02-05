@@ -30,10 +30,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_enemy2_large_walk",
-    "path": "sprites/spr_enemy2_large_walk/spr_enemy2_large_walk.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

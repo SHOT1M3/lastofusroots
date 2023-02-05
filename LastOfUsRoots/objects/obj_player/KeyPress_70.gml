@@ -84,21 +84,12 @@ if(grounded)
 	/// @DnDVersion : 1
 	/// @DnDHash : 74C0348D
 	/// @DnDParent : 447D70AA
-	/// @DnDArgument : "xpos" "70"
+	/// @DnDArgument : "xpos" "90"
 	/// @DnDArgument : "xpos_relative" "1"
 	/// @DnDArgument : "ypos" "-15"
 	/// @DnDArgument : "ypos_relative" "1"
 	/// @DnDArgument : "objectid" "obj_block_mushroom"
 	/// @DnDArgument : "layer" "layer"
 	/// @DnDSaveInfo : "objectid" "obj_block_mushroom"
-	instance_create_layer(x + 70, y + -15, layer, obj_block_mushroom);
-
-	/// @DnDAction : YoYo Games.Instances.Sprite_Scale
-	/// @DnDVersion : 1
-	/// @DnDHash : 0E909D7E
-	/// @DnDParent : 447D70AA
-	/// @DnDArgument : "xscale" "2"
-	/// @DnDArgument : "yscale" "2"
-	image_xscale = 2;
-	image_yscale = 2;
+	instance_create_layer(x + 90, y + -15, layer, obj_block_mushroom);
 }
