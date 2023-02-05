@@ -154,7 +154,6 @@
     {"name":"obj_touch_button_pause","order":4,"path":"objects/obj_touch_button_pause/obj_touch_button_pause.yy",},
     {"name":"spr_food","order":1,"path":"sprites/spr_food/spr_food.yy",},
     {"name":"spr_mushroom_3_growth","order":19,"path":"sprites/spr_mushroom_3_growth/spr_mushroom_3_growth.yy",},
-    {"name":"rm_level_2","order":1,"path":"rooms/rm_level_2/rm_level_2.yy",},
     {"name":"spr_hud_background","order":3,"path":"sprites/spr_hud_background/spr_hud_background.yy",},
     {"name":"obj_block_brick_impassable","order":5,"path":"objects/obj_block_brick_impassable/obj_block_brick_impassable.yy",},
     {"name":"ft_hud","order":1,"path":"fonts/ft_hud/ft_hud.yy",},

@@ -199,7 +199,6 @@
     {"id":{"name":"obj_touch_button_pause","path":"objects/obj_touch_button_pause/obj_touch_button_pause.yy",},"order":4,},
     {"id":{"name":"spr_food","path":"sprites/spr_food/spr_food.yy",},"order":0,},
     {"id":{"name":"spr_mushroom_3_growth","path":"sprites/spr_mushroom_3_growth/spr_mushroom_3_growth.yy",},"order":0,},
-    {"id":{"name":"rm_level_2","path":"rooms/rm_level_2/rm_level_2.yy",},"order":1,},
     {"id":{"name":"spr_hud_background","path":"sprites/spr_hud_background/spr_hud_background.yy",},"order":3,},
     {"id":{"name":"obj_block_brick_impassable","path":"objects/obj_block_brick_impassable/obj_block_brick_impassable.yy",},"order":0,},
     {"id":{"name":"ft_hud","path":"fonts/ft_hud/ft_hud.yy",},"order":1,},
@@ -264,7 +263,6 @@
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
-    {"roomId":{"name":"rm_level_2","path":"rooms/rm_level_2/rm_level_2.yy",},},
     {"roomId":{"name":"level_1","path":"rooms/level_1/level_1.yy",},},
     {"roomId":{"name":"level_2","path":"rooms/level_2/level_2.yy",},},
     {"roomId":{"name":"rm_end","path":"rooms/rm_end/rm_end.yy",},},
