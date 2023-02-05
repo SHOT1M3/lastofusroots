@@ -254,6 +254,7 @@
     {"id":{"name":"spr_mushroom_group_4","path":"sprites/spr_mushroom_group_4/spr_mushroom_group_4.yy",},"order":12,},
     {"id":{"name":"snd_enemy_hit","path":"sounds/snd_enemy_hit/snd_enemy_hit.yy",},"order":7,},
     {"id":{"name":"obj_end_gate_particles","path":"objects/obj_end_gate_particles/obj_end_gate_particles.yy",},"order":1,},
+    {"id":{"name":"level_2","path":"rooms/level_2/level_2.yy",},"order":0,},
     {"id":{"name":"obj_block_brick_destroy","path":"objects/obj_block_brick_destroy/obj_block_brick_destroy.yy",},"order":4,},
     {"id":{"name":"ts_world","path":"tilesets/ts_world/ts_world.yy",},"order":0,},
     {"id":{"name":"spr_tileset_water","path":"sprites/spr_tileset_water/spr_tileset_water.yy",},"order":1,},
@@ -264,6 +265,7 @@
     {"roomId":{"name":"level_1","path":"rooms/level_1/level_1.yy",},},
     {"roomId":{"name":"rm_level_2","path":"rooms/rm_level_2/rm_level_2.yy",},},
     {"roomId":{"name":"rm_end","path":"rooms/rm_end/rm_end.yy",},},
+    {"roomId":{"name":"level_2","path":"rooms/level_2/level_2.yy",},},
   ],
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
