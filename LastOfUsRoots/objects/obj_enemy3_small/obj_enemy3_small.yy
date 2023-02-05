@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_enemy3_small_walk",
+    "path": "sprites/spr_enemy3_small_walk/spr_enemy3_small_walk.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

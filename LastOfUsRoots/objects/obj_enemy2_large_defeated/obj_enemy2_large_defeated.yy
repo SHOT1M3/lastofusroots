@@ -27,7 +27,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_enemy2_defeated",
+    "path": "sprites/spr_enemy2_defeated/spr_enemy2_defeated.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }
