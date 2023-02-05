@@ -22,8 +22,10 @@ instance_create_layer(other.x, other.y, "Instances", obj_coin_collect_effect);
 /// @DnDHash : 6CC76BFD
 /// @DnDComment : Play the coin collect sound
 /// @DnDArgument : "soundid" "snd_coin_collect_01"
+/// @DnDArgument : "gain" "1.5"
+/// @DnDArgument : "pitch" "0.4"
 /// @DnDSaveInfo : "soundid" "snd_coin_collect_01"
-audio_play_sound(snd_coin_collect_01, 0, 0, 1.0, undefined, 1.0);
+audio_play_sound(snd_coin_collect_01, 0, 0, 1.5, undefined, 0.4);
 
 /// @DnDAction : YoYo Games.Instances.Destroy_Instance
 /// @DnDVersion : 1
