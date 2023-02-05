@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "spr_tileset_world",
   "bbox_bottom": 1279,
-  "bbox_left": 127,
+  "bbox_left": 126,
   "bbox_right": 1535,
   "bbox_top": 0,
   "bboxMode": 0,
