@@ -182,6 +182,7 @@
     {"id":{"name":"spr_enemy3_small_defeated","path":"sprites/spr_enemy3_small_defeated/spr_enemy3_small_defeated.yy",},"order":0,},
     {"id":{"name":"spr_hanging_1","path":"sprites/spr_hanging_1/spr_hanging_1.yy",},"order":0,},
     {"id":{"name":"snd_jump","path":"sounds/snd_jump/snd_jump.yy",},"order":4,},
+    {"id":{"name":"obj_block_mushroom","path":"objects/obj_block_mushroom/obj_block_mushroom.yy",},"order":0,},
     {"id":{"name":"spr_mushroom_group_6","path":"sprites/spr_mushroom_group_6/spr_mushroom_group_6.yy",},"order":14,},
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},"order":2,},
     {"id":{"name":"spr_touch_right","path":"sprites/spr_touch_right/spr_touch_right.yy",},"order":0,},

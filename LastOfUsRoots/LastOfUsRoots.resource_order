@@ -141,6 +141,7 @@
     {"name":"spr_backtrees_2","order":2,"path":"sprites/spr_backtrees_2/spr_backtrees_2.yy",},
     {"name":"obj_placeholder_message","order":4,"path":"objects/obj_placeholder_message/obj_placeholder_message.yy",},
     {"name":"snd_jump","order":4,"path":"sounds/snd_jump/snd_jump.yy",},
+    {"name":"obj_block_mushroom","order":6,"path":"objects/obj_block_mushroom/obj_block_mushroom.yy",},
     {"name":"spr_mushroom_group_6","order":14,"path":"sprites/spr_mushroom_group_6/spr_mushroom_group_6.yy",},
     {"name":"spr_player_idle","order":2,"path":"sprites/spr_player_idle/spr_player_idle.yy",},
     {"name":"snd_portal_01","order":6,"path":"sounds/snd_portal_01/snd_portal_01.yy",},
