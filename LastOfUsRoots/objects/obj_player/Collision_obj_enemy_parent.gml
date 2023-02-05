@@ -15,6 +15,24 @@ var l1B8184F5_0;
 l1B8184F5_0 = keyboard_check(vk_control);
 if (l1B8184F5_0)
 {
+	/// @DnDAction : YoYo Games.Instances.Set_Sprite
+	/// @DnDVersion : 1
+	/// @DnDHash : 489A1E3E
+	/// @DnDComment : Change the sprite to spr_player_jump$(13_10)as the player is now jumping (and$(13_10)not falling anymore).
+	/// @DnDDisabled : 1
+	/// @DnDParent : 1B8184F5
+	/// @DnDArgument : "spriteind" "spr_player_walk_pickaxe"
+	/// @DnDSaveInfo : "spriteind" "spr_player_walk_pickaxe"
+
+
+	/// @DnDAction : YoYo Games.Instances.Sprite_Animation_Speed
+	/// @DnDVersion : 1
+	/// @DnDHash : 31CE8028
+	/// @DnDComment : The animation speed at this point would be 0$(13_10)if the fall animation had finished, so we reset$(13_10)it to 1 so the jump animation can play.
+	/// @DnDDisabled : 1
+	/// @DnDParent : 1B8184F5
+
+
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 6EFFF331
@@ -22,23 +40,6 @@ if (l1B8184F5_0)
 	/// @DnDParent : 1B8184F5
 	/// @DnDArgument : "var" "other.hp"
 	other.hp = 0;
-
-	/// @DnDAction : YoYo Games.Instances.Set_Sprite
-	/// @DnDVersion : 1
-	/// @DnDHash : 489A1E3E
-	/// @DnDComment : Change the sprite to spr_player_jump$(13_10)as the player is now jumping (and$(13_10)not falling anymore).
-	/// @DnDParent : 1B8184F5
-	/// @DnDArgument : "spriteind" "spr_player_walk_pickaxe"
-	/// @DnDSaveInfo : "spriteind" "spr_player_walk_pickaxe"
-	sprite_index = spr_player_walk_pickaxe;
-	image_index = 0;
-
-	/// @DnDAction : YoYo Games.Instances.Sprite_Animation_Speed
-	/// @DnDVersion : 1
-	/// @DnDHash : 31CE8028
-	/// @DnDComment : The animation speed at this point would be 0$(13_10)if the fall animation had finished, so we reset$(13_10)it to 1 so the jump animation can play.
-	/// @DnDParent : 1B8184F5
-	image_speed = 1;
 
 	/// @DnDAction : YoYo Games.Audio.Play_Audio
 	/// @DnDVersion : 1.1
@@ -74,6 +75,24 @@ if (l5068BCDB_0)
 	/// @DnDArgument : "var" "bbox_right - vel_x"
 	/// @DnDArgument : "op" "1"
 	/// @DnDArgument : "value" "other.bbox_right - other.vel_x"
+	/// @DnDAction : YoYo Games.Instances.Set_Sprite
+	/// @DnDVersion : 1
+	/// @DnDHash : 79220902
+	/// @DnDComment : Change the sprite to spr_player_jump$(13_10)as the player is now jumping (and$(13_10)not falling anymore).
+	/// @DnDDisabled : 1
+	/// @DnDParent : 315B5B9F
+	/// @DnDArgument : "spriteind" "spr_player_walk_pickaxe"
+	/// @DnDSaveInfo : "spriteind" "spr_player_walk_pickaxe"
+	
+	
+	/// @DnDAction : YoYo Games.Instances.Sprite_Animation_Speed
+	/// @DnDVersion : 1
+	/// @DnDHash : 105D20C9
+	/// @DnDComment : The animation speed at this point would be 0$(13_10)if the fall animation had finished, so we reset$(13_10)it to 1 so the jump animation can play.
+	/// @DnDDisabled : 1
+	/// @DnDParent : 315B5B9F
+	
+	
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 7D04F746
@@ -81,23 +100,6 @@ if (l5068BCDB_0)
 	/// @DnDParent : 315B5B9F
 	/// @DnDArgument : "var" "other.hp"
 	other.hp = 0;
-	
-	/// @DnDAction : YoYo Games.Instances.Set_Sprite
-	/// @DnDVersion : 1
-	/// @DnDHash : 79220902
-	/// @DnDComment : Change the sprite to spr_player_jump$(13_10)as the player is now jumping (and$(13_10)not falling anymore).
-	/// @DnDParent : 315B5B9F
-	/// @DnDArgument : "spriteind" "spr_player_walk_pickaxe"
-	/// @DnDSaveInfo : "spriteind" "spr_player_walk_pickaxe"
-	sprite_index = spr_player_walk_pickaxe;
-	image_index = 0;
-	
-	/// @DnDAction : YoYo Games.Instances.Sprite_Animation_Speed
-	/// @DnDVersion : 1
-	/// @DnDHash : 105D20C9
-	/// @DnDComment : The animation speed at this point would be 0$(13_10)if the fall animation had finished, so we reset$(13_10)it to 1 so the jump animation can play.
-	/// @DnDParent : 315B5B9F
-	image_speed = 1;
 	
 	/// @DnDAction : YoYo Games.Audio.Play_Audio
 	/// @DnDVersion : 1.1
