@@ -236,6 +236,7 @@
     {"id":{"name":"spr_hud_coins","path":"sprites/spr_hud_coins/spr_hud_coins.yy",},"order":0,},
     {"id":{"name":"seq_game_over","path":"sequences/seq_game_over/seq_game_over.yy",},"order":3,},
     {"id":{"name":"snd_coin_collect_01","path":"sounds/snd_coin_collect_01/snd_coin_collect_01.yy",},"order":2,},
+    {"id":{"name":"obj_button_restart","path":"objects/obj_button_restart/obj_button_restart.yy",},"order":0,},
     {"id":{"name":"obj_player_defeat_transition","path":"objects/obj_player_defeat_transition/obj_player_defeat_transition.yy",},"order":6,},
     {"id":{"name":"obj_block_coins_hit_animtion","path":"objects/obj_block_coins_hit_animtion/obj_block_coins_hit_animtion.yy",},"order":2,},
     {"id":{"name":"level_1","path":"rooms/level_1/level_1.yy",},"order":0,},

@@ -181,6 +181,7 @@
     {"name":"spr_enemy1_walk","order":2,"path":"sprites/spr_enemy1_walk/spr_enemy1_walk.yy",},
     {"name":"seq_game_over","order":3,"path":"sequences/seq_game_over/seq_game_over.yy",},
     {"name":"snd_coin_collect_01","order":2,"path":"sounds/snd_coin_collect_01/snd_coin_collect_01.yy",},
+    {"name":"obj_button_restart","order":3,"path":"objects/obj_button_restart/obj_button_restart.yy",},
     {"name":"obj_player_defeat_transition","order":6,"path":"objects/obj_player_defeat_transition/obj_player_defeat_transition.yy",},
     {"name":"obj_block_coins_hit_animtion","order":2,"path":"objects/obj_block_coins_hit_animtion/obj_block_coins_hit_animtion.yy",},
     {"name":"level_1","order":2,"path":"rooms/level_1/level_1.yy",},
