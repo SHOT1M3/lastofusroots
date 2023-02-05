@@ -28,12 +28,11 @@ if(hp < 3)
 /// @DnDVersion : 1
 /// @DnDHash : 4FA4297B
 /// @DnDComment : Create an instance of$(13_10)obj_coin_collect_effect at the position$(13_10)of the 'other' instance, which is the$(13_10)coin that the player touched.
-/// @DnDDisabled : 1
 /// @DnDArgument : "xpos" "other.x"
 /// @DnDArgument : "ypos" "other.y"
 /// @DnDArgument : "objectid" "obj_coin_collect_effect"
 /// @DnDSaveInfo : "objectid" "obj_coin_collect_effect"
-
+instance_create_layer(other.x, other.y, "Instances", obj_coin_collect_effect);
 
 /// @DnDAction : YoYo Games.Audio.Play_Audio
 /// @DnDVersion : 1.1

@@ -10,9 +10,9 @@ move_speed = 8;
 /// @DnDVersion : 1
 /// @DnDHash : 78B86BD3
 /// @DnDComment : This is the friction value applied to the character's$(13_10)horizontal movement every frame.$(13_10)$(13_10)This is applied in the Begin Step event. The friction$(13_10)is reduced when the character is in mid-air.
-/// @DnDArgument : "expr" "0.7"
+/// @DnDArgument : "expr" "1.5"
 /// @DnDArgument : "var" "friction_power"
-friction_power = 0.7;
+friction_power = 1.5;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
