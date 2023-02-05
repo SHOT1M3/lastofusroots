@@ -120,15 +120,17 @@ if (l5068BCDB_0)
 /// @DnDVersion : 1
 /// @DnDHash : 207E7703
 /// @DnDComment : This checks if the player is invincible,$(13_10)by checking if no_hurt_frames is greater$(13_10)than 0.
-/// @DnDDisabled : 1
 /// @DnDArgument : "var" "no_hurt_frames"
 /// @DnDArgument : "op" "2"
-/// @DnDAction : YoYo Games.Common.Exit_Event
-/// @DnDVersion : 1
-/// @DnDHash : 3427C69C
-/// @DnDComment : In that case we exit the event so the$(13_10)player is not hurt by the enemy.
-/// @DnDDisabled : 1
-/// @DnDParent : 207E7703
+if(no_hurt_frames > 0)
+{
+	/// @DnDAction : YoYo Games.Common.Exit_Event
+	/// @DnDVersion : 1
+	/// @DnDHash : 3427C69C
+	/// @DnDComment : In that case we exit the event so the$(13_10)player is not hurt by the enemy.
+	/// @DnDParent : 207E7703
+	exit;
+}
 
 /// @DnDAction : YoYo Games.Common.Temp_Variable
 /// @DnDVersion : 1
