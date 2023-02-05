@@ -35,6 +35,8 @@
     {"name":"UI","order":5,"path":"folders/Sounds/SFX/UI.yy",},
     {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
     {"name":"Enemy1","order":2,"path":"folders/Sprites/Enemy1.yy",},
+    {"name":"Enemy2","order":12,"path":"folders/Sprites/Enemy2.yy",},
+    {"name":"Enemy3","order":13,"path":"folders/Sprites/Enemy3.yy",},
     {"name":"Environment","order":3,"path":"folders/Sprites/Environment.yy",},
     {"name":"Backgrounds","order":4,"path":"folders/Sprites/Environment/Backgrounds.yy",},
     {"name":"Blocks","order":1,"path":"folders/Sprites/Environment/Blocks.yy",},
@@ -55,8 +57,6 @@
     {"name":"VFX","order":11,"path":"folders/Sprites/VFX.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":16,"path":"folders/Timelines.yy",},
-    {"name":"Enemy2","order":12,"path":"folders/Sprites/Enemy2.yy",},
-    {"name":"Enemy3","order":13,"path":"folders/Sprites/Enemy3.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_touch_button_right","order":1,"path":"objects/obj_touch_button_right/obj_touch_button_right.yy",},
