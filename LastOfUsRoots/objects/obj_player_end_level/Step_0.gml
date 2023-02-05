@@ -9,9 +9,8 @@ event_inherited();
 /// @DnDHash : 3C186C75
 /// @DnDComment : This checks if the current X position is not$(13_10)equal to the end gate's X position, meaning the$(13_10)player is not standing in the center of the gate.$(13_10)$(13_10)In that case we want to move it there before fading$(13_10)it.
 /// @DnDArgument : "var" "x"
-/// @DnDArgument : "not" "1"
 /// @DnDArgument : "value" "obj_end_gate.x"
-if(!(x == obj_end_gate.x))
+if(x == obj_end_gate.x)
 {
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
