@@ -7,17 +7,17 @@ event_inherited();
 /// @DnDVersion : 1
 /// @DnDHash : 34D15F53
 /// @DnDComment : This is the object that replaces the enemy$(13_10)once it is defeated.
-/// @DnDArgument : "expr" "obj_enemy1_defeated"
+/// @DnDArgument : "expr" "obj_enemy3_small_defeated"
 /// @DnDArgument : "var" "defeated_object"
-defeated_object = obj_enemy1_defeated;
+defeated_object = obj_enemy3_small_defeated;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 5AB6E56E
 /// @DnDComment : This sets the movement speed for this particular$(13_10)enemy.
-/// @DnDArgument : "expr" "4"
+/// @DnDArgument : "expr" "3"
 /// @DnDArgument : "var" "move_speed"
-move_speed = 4;
+move_speed = 3;
 
 /// @DnDAction : YoYo Games.Random.Choose
 /// @DnDVersion : 1

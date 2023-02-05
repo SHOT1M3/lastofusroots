@@ -7,9 +7,9 @@ event_inherited();
 /// @DnDVersion : 1
 /// @DnDHash : 34D15F53
 /// @DnDComment : This is the object that replaces the enemy$(13_10)once it is defeated.
-/// @DnDArgument : "expr" "obj_enemy1_defeated"
+/// @DnDArgument : "expr" "obj_enemy2_large_defeated"
 /// @DnDArgument : "var" "defeated_object"
-defeated_object = obj_enemy1_defeated;
+defeated_object = obj_enemy2_large_defeated;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1

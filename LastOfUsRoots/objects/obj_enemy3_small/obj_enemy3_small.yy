@@ -34,9 +34,6 @@
     "name": "spr_enemy3_small_walk",
     "path": "sprites/spr_enemy3_small_walk/spr_enemy3_small_walk.yy",
   },
-  "spriteMaskId": {
-    "name": "spr_enemy1_walk",
-    "path": "sprites/spr_enemy1_walk/spr_enemy1_walk.yy",
-  },
+  "spriteMaskId": null,
   "visible": true,
 }
