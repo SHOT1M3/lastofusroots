@@ -16,6 +16,10 @@
     {"name":"inst_67CA7485","path":"rooms/rm_level_2/rm_level_2.yy",},
     {"name":"inst_5E63D48","path":"rooms/rm_level_2/rm_level_2.yy",},
     {"name":"inst_5FC48D25","path":"rooms/rm_level_2/rm_level_2.yy",},
+    {"name":"inst_8F84F16","path":"rooms/rm_level_2/rm_level_2.yy",},
+    {"name":"inst_37C02E77","path":"rooms/rm_level_2/rm_level_2.yy",},
+    {"name":"inst_7DA0C53B","path":"rooms/rm_level_2/rm_level_2.yy",},
+    {"name":"inst_6136F126","path":"rooms/rm_level_2/rm_level_2.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -103,6 +107,10 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_67CA7485","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_food","path":"objects/obj_food/obj_food.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":3392.0,"y":1600.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5E63D48","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_coin","path":"objects/obj_coin/obj_coin.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":3072.0,"y":1600.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5FC48D25","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_enemy1","path":"objects/obj_enemy1/obj_enemy1.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2688.0,"y":1600.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_8F84F16","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_block_brick","path":"objects/obj_block_brick/obj_block_brick.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1024.0,"y":1536.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_37C02E77","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_block_brick","path":"objects/obj_block_brick/obj_block_brick.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":896.0,"y":1408.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7DA0C53B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_block_brick","path":"objects/obj_block_brick/obj_block_brick.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1280.0,"y":1536.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6136F126","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_block_brick","path":"objects/obj_block_brick/obj_block_brick.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1536.0,"y":1536.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"Foliage","assets":[
         {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_2947EC4F_1","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_ground_side_leaves_left","path":"sprites/spr_ground_side_leaves_left/spr_ground_side_leaves_left.yy",},"x":256.0,"y":1200.0,},
